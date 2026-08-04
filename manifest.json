@@ -1,0 +1,17 @@
+{
+  "name": "Sunny & Harmony",
+  "short_name": "SunnyHarmony",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "id": "/SunnyHarmony/audio-app-id",
+  "start_url": "/SunnyHarmony/index.html",
+  "scope": "/SunnyHarmony/",
+  "icons": [
+    {
+      "src": "/SunnyHarmony/src/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

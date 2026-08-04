@@ -58,8 +58,10 @@ track.addEventListener('play', () => {
             ]
         });
         // 5. חיבור כפתורי השליטה של הדיינמיק איילנד לנגן באתר
-        navigator.mediaSession.setActionHandler('play', () => { audio.play(); });
-        navigator.mediaSession.setActionHandler('pause', () => { audio.pause(); });
+        navigator.mediaSession.setActionHandler('play', () => { playsong(); });
+        navigator.mediaSession.setActionHandler('pause', () => { pausesong(); });
+        navigator.mediaSession.setActionHandler('nexttrack', () => { next_song(); });
+        navigator.mediaSession.setActionHandler('previoustrack', () => { previous_song(); });
     }
 });
 
@@ -378,13 +380,6 @@ window.addEventListener('keydown', (event) => {
   if (event.key === ' ' || event.key === 'k'){
     event.preventDefault();
     justplay();
-  }
-});
-
-window.addEventListener("keydown" , (event) => {
-  if (event.key === 'm'){
-    event.preventDefault();
-    toggle_mute();
   }
 });
 
