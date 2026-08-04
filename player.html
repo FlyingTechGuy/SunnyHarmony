@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+	<link rel="stylesheet" href="player.css">
+	<link rel="shortcut icon" type="image/png" href="src/Sunny&HarmonyLogo.ico">
+    <script src="https://kit.fontawesome.com/ceab6117ab.js" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="https://cdn.userway.org/widget.js"></script> -->
+	<title>Sunny&Harmony - The Best Music App</title>
+</head>
+<body>
+    <div class="bgGr"></div>
+    <div class="blurSec">
+        <div class="topCont">
+            <div class="backBtnBox" id="backBtnBox">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+            <div class="songNumBox">
+                <p class="songNumTxt"><span id="songNumCur">1</span> of <span id="songNumTot">35</span></p>
+            </div>
+            <div class="ccBox" id="ccBox" title="Open CC (C)">
+                <i class="fa-solid fa-closed-captioning"></i>
+            </div>
+        </div>
+        <div class="imgBoxBlur">
+            <img src="" alt="" class="imgBlur" id="imgBlur">
+        </div>
+        <div class="imgBox">
+            <img src="" alt="" class="imgCover" id="imgCover">
+        </div>
+        <div class="imgTxtBox">
+            <p id="songName">TENGO UN PLAN REMIX</p>
+            <p id="artistName">KEY-KEY FT OZUNA</p>
+            <p id="genreTxt">Reggaeton</p>
+        </div>
+        <div class="fiveSecCont">
+            <div class="forwardFiveBtn" onclick="forwardFive()">
+                <p class="fiveSecTxt" id="fiveSecForward"><i class="fa-solid fa-forward"></i></p>
+            </div>
+            <div class="backwardFiveBtn" onclick="backwardFive()">
+                <p class="fiveSecTxt" id="fiveSecBackward"><i class="fa-solid fa-backward"></i></p>
+            </div>
+        </div>
+    </div>
+    <div class="bottomSec">
+        <div class="sliderSec">
+            <div class="sliderBox">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()" class="diraction_slider">
+            </div>
+            <div class="curTimeBox">
+                <p id="m">0</p><p style="padding-left: 0px; padding-right: 0px;">:</p><p id="s">00</p>
+            </div>
+            <div class="totTimeBox">
+                <p id="totalTime">2:58</p>
+            </div>
+        </div>
+        <div class="buttonsSec">
+            <div onclick="karaoke_toggle()" title="Toggle Karaoke (M)" id="kBtnBox"><i class="fa-solid fa-microphone-lines"></i></div>
+            <div onclick="previous_song()" onmouseover="previousTitleShow(this)" id="prevBtnBox"><i class="fa-solid fa-backward-step"></i></div>
+            <div onclick="justplay()" onmouseover="playPauseTitle(this)" id="playBtnBox"><i class="fa-solid fa-play"></i></div>
+            <div onclick="next_song()" onmouseover="nextTitleShow(this)" id="nextBtnBox"><i class="fa-solid fa-forward-step"></i></div>
+            <div onclick="autoplay_toggle()" title="Toggle Auto Play (A)" id="apBtnBox"><i class="fa-solid fa-repeat"></i></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</html>

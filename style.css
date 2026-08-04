@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "ef";
+    src: url("src/Inter_28pt-Regular.ttf");
+}
+
+@font-face {
+    font-family: "efb";
+    src: url("src/Inter_28pt-Bold.ttf");
+}
+
+html {
+	scroll-behavior: smooth;
+    user-select: none;
+    overscroll-behavior: none;
+    /*overflow-x: hidden;  מה שמשפיע על הגלילה באייפון ואנדרואיד 
+    overflow-x: auto;*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --darkgray: rgb(26, 26, 26);
+    --darkred: #c7992f; /*D5AC4E*/
+    --black: #000;
+    --white: #fff;
+    --mouse-x: -100px;
+    --mouse-y: -100px;
+    --dot-scale: 1;
+    --outline-scale: 1;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    /* cursor: none !important; */
+    max-width: 100vw;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.uwy.userway_p1 .userway_buttons_wrapper {
+    position: fixed;
+    top: auto !important;
+    bottom: 20px !important;
+    left: 64px !important;
+}
+
+body {
+    position: relative;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    padding-block: 50px;
+    /* background-color: #0c0c0c;
+    background-color: #000000; */
+    /* opacity: 0; */
+    transition: 0.25s;
+    overscroll-behavior: none;
+}
+
+/* body.show {
+    opacity: 1;
+} */
+
+.bgGr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: hsla(0, 0%, 6%, 1);
+    background: radial-gradient(circle, hsla(0, 0%, 6%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+    background: -moz-radial-gradient(circle, hsla(0, 0%, 6%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+    background: -webkit-radial-gradient(circle, hsla(0, 0%, 6%, 1) 0%, hsla(0, 0%, 0%, 1) 100%);
+}
+
+.topTitle {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.playlistsCont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 40px;
+    gap: 12px;
+}
+
+.playlistBox {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: bisque;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* .pl1 {
+    background: hsla(42, 93%, 57%, 1);
+    background: linear-gradient(45deg, hsla(42, 93%, 57%, 1) 0%, hsla(358, 78%, 62%, 1) 100%);
+    background: -moz-linear-gradient(45deg, hsla(42, 93%, 57%, 1) 0%, hsla(358, 78%, 62%, 1) 100%);
+    background: -webkit-linear-gradient(45deg, hsla(42, 93%, 57%, 1) 0%, hsla(358, 78%, 62%, 1) 100%);
+}
+
+.pl2 {
+    background: hsla(217, 100%, 50%, 1);
+    background: linear-gradient(45deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -moz-linear-gradient(45deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    background: -webkit-linear-gradient(45deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+}
+
+.pl3 {
+    background: hsla(291, 79%, 51%, 1);
+    background: linear-gradient(45deg, hsla(291, 79%, 51%, 1) 0%, hsla(240, 91%, 73%, 1) 100%);
+    background: -moz-linear-gradient(45deg, hsla(291, 79%, 51%, 1) 0%, hsla(240, 91%, 73%, 1) 100%);
+    background: -webkit-linear-gradient(45deg, hsla(291, 79%, 51%, 1) 0%, hsla(240, 91%, 73%, 1) 100%);
+}
+
+.pl4 {
+    background: hsla(97, 56%, 42%, 1);
+    background: -moz-linear-gradient(45deg, hsla(97, 56%, 42%, 1) 0%, hsla(92, 55%, 62%, 1) 100%);
+    background: -webkit-linear-gradient(45deg, hsla(97, 56%, 42%, 1) 0%, hsla(92, 55%, 62%, 1) 100%);
+    background: linear-gradient(45deg, hsla(97, 56%, 42%, 1) 0%, hsla(92, 55%, 62%, 1) 100%);
+} */
+
+.pl1 {
+    background-color:hsla(14,90%,56%,1);
+background-image:
+radial-gradient(at 100% 29%, hsla(47,100%,60%,0.75) 0px, transparent 50%),
+radial-gradient(at 100% 70%, hsla(47,100%,60%,0.75) 0px, transparent 50%),
+radial-gradient(at 39% 99%, hsla(47,100%,60%,0.8) 0px, transparent 50%),
+radial-gradient(at 21% 0%, hsla(47,100%,60%,1) 0px, transparent 50%);
+}
+
+.pl2 {
+    background-color: #e63946;
+  background-image: 
+    radial-gradient(circle at 15% 65%, #00b4d8 0%, transparent 55%),
+    radial-gradient(circle at 85% 20%, #ff4d4d 0%, transparent 50%),
+    radial-gradient(circle at 50% 30%, #ff8c42 0%, transparent 60%),
+    radial-gradient(circle at 90% 85%, #b5179e 0%, transparent 45%);
+}
+
+.pl3 {
+    background-color: #7209b7;
+  background-image: 
+    radial-gradient(circle at 15% 70%, #ff007f 0%, transparent 50%),
+    radial-gradient(circle at 85% 85%, #4cc9f0 0%, transparent 50%),
+    radial-gradient(circle at 50% 15%, #3a0ca3 0%, transparent 60%),
+    radial-gradient(circle at 85% 20%, #f72585 0%, transparent 50%);
+}
+
+.pl4 {
+    background-color: #03045e;
+  background-image: 
+    radial-gradient(circle at 15% 85%, #0077b6 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, #7209b7 0%, transparent 55%),
+    radial-gradient(circle at 85% 85%, #00b4d8 0%, transparent 50%),
+    radial-gradient(circle at 20% 20%, #03045e 0%, transparent 70%);
+}
+
+.pl5 {
+    background-color:#ff99ce;
+background-image:
+radial-gradient(at 88% 1%, hsla(251,83%,61%,1) 0px, transparent 50%),
+radial-gradient(at 35% 57%, hsla(317,75%,76%,1) 0px, transparent 50%),
+radial-gradient(at 32% 97%, hsla(30,76%,68%,1) 0px, transparent 50%),
+radial-gradient(at 44% 90%, hsla(187,92%,78%,1) 0px, transparent 50%);
+}
+
+.pl6 {
+    background-color:#ffbd99;
+background-image:
+radial-gradient(at 23% 21%, hsla(17,90%,71%,1) 0px, transparent 50%),
+radial-gradient(at 97% 78%, hsla(171,95%,63%,1) 0px, transparent 50%),
+radial-gradient(at 97% 13%, hsla(277,67%,65%,1) 0px, transparent 50%),
+radial-gradient(at 87% 64%, hsla(207,66%,62%,1) 0px, transparent 50%),
+radial-gradient(at 64% 73%, hsla(226,83%,77%,1) 0px, transparent 50%),
+radial-gradient(at 0% 68%, hsla(101,83%,78%,1) 0px, transparent 50%),
+radial-gradient(at 23% 17%, hsla(305,80%,63%,1) 0px, transparent 50%);
+}
+
+.playlistBoxTitle {
+    position: relative;
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 900;
+    font-family: "efb";
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.playlistBoxSongNum {
+    position: relative;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: "ef";
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
