@@ -8,6 +8,7 @@ let slider = document.querySelector('#duration_slider');
 let track_image = document.querySelector('#imgCover');
 let track_image_under = document.querySelector('#imgBlur');
 let auto_play = document.querySelector('#apBtnBox');
+let shuffle = document.querySelector('#shBtnBox');
 let karaoke = document.querySelector('#kBtnBox');
 let forward_five = document.querySelector('#fiveSecForward');
 let backward_five = document.querySelector('#fiveSecBackward');
@@ -20,7 +21,8 @@ let total_time = document.querySelector('#totalTime');
 
 
 let timer;
-let autoplay = 0;
+let autoplay = 1;
+let toggleShuffle = 0;
 let toggleKaraoke = 0;
 
 let pl = 0;
@@ -391,6 +393,13 @@ window.addEventListener("keydown" , (event) => {
 });
 
 window.addEventListener("keydown" , (event) => {
+  if (event.key === 's'){
+    event.preventDefault();
+    shuffle_toggle();
+  }
+});
+
+window.addEventListener("keydown" , (event) => {
   if (event.key === 'm'){
     event.preventDefault();
     karaoke_toggle();
@@ -464,14 +473,16 @@ function justplay() {
 function playsong() {
     track.play();
     Playing_song = true;
-    play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
+    document.getElementById("faPlay").classList.add("fahide");
+    document.getElementById("faPause").classList.remove("fahide");
 }
 
 // pause song
 function pausesong() {
 	track.pause();
 	Playing_song = false;
-	play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
+    document.getElementById("faPlay").classList.remove("fahide");
+    document.getElementById("faPause").classList.add("fahide");
 }
 
 // forward 5s
@@ -523,7 +534,6 @@ function next_song() {
     s.innerHTML = secends;
     playsong();
 }
-
 
 // previous song
 function previous_song() {
@@ -618,6 +628,16 @@ function autoplay_toggle() {
     } else {
         autoplay = 1;
         auto_play.classList.add("active");
+	}
+}
+
+function shuffle_toggle() {
+    if (toggleShuffle == 1) {
+        toggleShuffle = 0;
+        shuffle.classList.remove("active");
+    } else {
+        toggleShuffle = 1;
+        shuffle.classList.add("active");
 	}
 }
 

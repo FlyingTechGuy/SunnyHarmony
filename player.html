@@ -45,6 +45,9 @@
         </div>
     </div>
     <div class="bottomSec">
+        <div class="apBtnBox">
+            <div onclick="autoplay_toggle()" title="Toggle Auto Play (A)" id="apBtnBox" class="active"><i class="fa-solid fa-repeat"></i></div>
+        </div>
         <div class="sliderSec">
             <div class="sliderBox">
                 <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()" class="diraction_slider">
@@ -57,11 +60,14 @@
             </div>
         </div>
         <div class="buttonsSec">
-            <div onclick="karaoke_toggle()" title="Toggle Karaoke (M)" id="kBtnBox"><i class="fa-solid fa-microphone-lines"></i></div>
+            <div onclick="karaoke_toggle()" title="Toggle Karaoke (M)" id="kBtnBox"><i class="fa-solid fa-microphone"></i></div>
             <div onclick="previous_song()" onmouseover="previousTitleShow(this)" id="prevBtnBox"><i class="fa-solid fa-backward-step"></i></div>
-            <div onclick="justplay()" onmouseover="playPauseTitle(this)" id="playBtnBox"><i class="fa-solid fa-play"></i></div>
+            <div onclick="justplay()" onmouseover="playPauseTitle(this)" id="playBtnBox">
+                <i id="faPlay" class="fa-solid fa-play"></i>
+                <i id="faPause" class="fa-solid fa-pause fahide"></i>
+            </div>
             <div onclick="next_song()" onmouseover="nextTitleShow(this)" id="nextBtnBox"><i class="fa-solid fa-forward-step"></i></div>
-            <div onclick="autoplay_toggle()" title="Toggle Auto Play (A)" id="apBtnBox"><i class="fa-solid fa-repeat"></i></div>
+            <div onclick="shuffle_toggle()" title="Toggle Shuffle (S)" id="shBtnBox"><i class="fa-solid fa-shuffle"></i></div>
         </div>
     </div>
     <script src="script.js"></script>
