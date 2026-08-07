@@ -78,14 +78,14 @@ body {
     padding-block: 50px;
     /* background-color: #0c0c0c;
     background-color: #000000; */
-    /* opacity: 0; */
+    opacity: 0;
     transition: 0.25s;
     overscroll-behavior: none;
 }
 
-/* body.show {
+body.show {
     opacity: 1;
-} */
+}
 
 .bgGr {
     position: absolute;

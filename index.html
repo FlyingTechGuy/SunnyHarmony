@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Sunny&Harmony">
@@ -46,8 +47,14 @@
         </div>
     </div>
     <script>
+        setTimeout(function() {
+            document.querySelector("body").classList.add("show");
+        }, 500);
         document.getElementById("pl1").addEventListener("click", function() {
-            window.location.replace("player.html");
+            document.querySelector("body").style.opacity = 0;
+            setTimeout(function(){
+                window.location.replace("player.html");
+            }, 250);
         })
     </script>
 </html>

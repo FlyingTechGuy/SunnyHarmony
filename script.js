@@ -19,7 +19,6 @@ let s = document.querySelector('#s');
 let total_time = document.querySelector('#totalTime');
 // let styleDir = document.querySelector('[data="dir"]');
 
-
 let timer;
 let autoplay = 1;
 let toggleShuffle = 0;
@@ -28,6 +27,10 @@ let toggleKaraoke = 0;
 let pl = 0;
 let index_no = 0;
 let Playing_song = false;
+
+setTimeout(function() {
+    document.querySelector("body").classList.add("show");
+}, 500);
 
 function resetAll() {
     toggleKaraoke = 0;
@@ -592,17 +595,17 @@ function playPauseTitle(x) {
 
 function load_track(index_no){
     clearInterval(timer);
-	reset_slider();
-	track.src = All_song[pl][index_no].path;
-	title.innerHTML = All_song[pl][index_no].name;
-	track_image.src = All_song[pl][index_no].img;
-	track_image_under.src = All_song[pl][index_no].img;
+	  reset_slider();
+	  track.src = All_song[pl][index_no].path;
+	  title.innerHTML = All_song[pl][index_no].name;
+	  track_image.src = All_song[pl][index_no].img;
+	  track_image_under.src = All_song[pl][index_no].img;
     artist.innerHTML = All_song[pl][index_no].singer;
     totalTime.innerHTML = All_song[pl][index_no].songtime;
     track.load();
-	timer = setInterval(range_slider ,1000);
-	tot_song_num.innerHTML = All_song[pl].length;
-	cur_song_num.innerHTML = index_no + 1;
+	  timer = setInterval(range_slider ,1000);
+	  tot_song_num.innerHTML = All_song[pl].length;
+	  cur_song_num.innerHTML = index_no + 1;
     document.title = All_song[pl][index_no].name + " - " + All_song[pl][index_no].singer;
 }
 
@@ -679,7 +682,10 @@ function karaoke_toggle() {
 }
 
 document.getElementById("backBtnBox").addEventListener("click", function() {
-    window.location.replace("index.html");
+  document.querySelector("body").style.opacity = 0;
+  setTimeout(function(){
+      window.location.replace("index.html");
+  }, 250);
 });
 
 document.getElementById("ccBox").addEventListener("click", function() {
@@ -727,13 +733,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function range_slider(){
-	let position = 0;
+	  let position = 0;
         
     // update slider position
-	if(!isNaN(track.duration)){
-	   position = track.currentTime * (100 / track.duration);
-	   slider.value =  position;
-	}
+	  if(!isNaN(track.duration)){
+	    position = track.currentTime * (100 / track.duration);
+	    slider.value =  position;
+	  }
 
     if(!isNaN(track.duration)){
       let time = Math.floor(track.currentTime);
@@ -746,8 +752,8 @@ function range_slider(){
        
     // function will run when the song is over
     if(track.ended) {
-        play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-        if(autoplay == 1){
+        // play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
+        if(autoplay == 1) {
             if(index_no < All_song[pl].length - 1) {
                 index_no += 1;
 	            load_track(index_no);
@@ -759,5 +765,8 @@ function range_slider(){
 	            playsong();
             }
         }
-	}
+        else {
+          pausesong();
+        }
+	  }
 }
