@@ -564,7 +564,9 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 .fiveSecTxt {
+    position: relative;
     font-size: 1.3em;
+    font-family: "elg";
     transition: 0.3s;
     opacity: 0;
     margin-right: 0px;
@@ -579,10 +581,18 @@ input[type="range"]::-webkit-slider-runnable-track {
     right: 15px;
 }
 
+#fiveSecForward i {
+    margin-left: 5px;
+}
+
 #fiveSecBackward {
     position: absolute;
     top: 10px;
     left: 15px;
+}
+
+#fiveSecBackward i {
+    margin-right: 5px;
 }
 
 .forwardFiveBtnAnim {

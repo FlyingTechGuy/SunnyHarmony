@@ -76,8 +76,8 @@ let All_song = [
   // Reggaton
    [{
      name: "AMANECE",
-     path: "music/Reggaeton/Anuel AA & Haze AMANECE.m4a",
-     img: "cover/Reggaeton/Anuel AA & Haze AMANECE.avif",
+     path: "music/Reggaeton/AnuelAA&HazeAMANECE.m4a",
+     img: "cover/Reggaeton/AnuelAA&HazeAMANECE.avif",
      singer: "Anuel AA & Haze",
      songtime: "3:11",
      karaoke: "",
@@ -85,8 +85,8 @@ let All_song = [
    },
    {
      name: "Canción Bonita",
-     path: "music/Reggaeton/Carlos Vives, Ricky Martin - Canción Bonita.m4a",
-     img: "cover/Reggaeton/Carlos Vives, Ricky Martin - Canción Bonita.avif",
+     path: "music/Reggaeton/CarlosVivesRickyMartinCanciónBonita.m4a",
+     img: "cover/Reggaeton/CarlosVivesRickyMartinCanciónBonita.avif",
      singer: "Carlos Vives, Ricky Martin",
      songtime: "2:59",
      karaoke: "",
@@ -94,8 +94,8 @@ let All_song = [
    },
    {
      name: "X ESO BB!",
-     path: "music/Reggaeton/JERE KLEIN & NICKI NICOLE - X ESO BB! ENFASIS.m4a",
-     img: "cover/Reggaeton/JERE KLEIN & NICKI NICOLE - X ESO BB! ENFASIS.avif",
+     path: "music/Reggaeton/JereKlein&NickiNicoleXEsoBB!Enfasis.m4a",
+     img: "cover/Reggaeton/JereKlein&NickiNicoleXEsoBB!Enfasis.avif",
      singer: "JERE KLEIN & NICKI NICOLE",
      songtime: "3:20",
      karaoke: "",
@@ -103,8 +103,8 @@ let All_song = [
    },
    {
      name: "Mírame Ahora",
-     path: "music/Reggaeton/Mírame Ahora (Salud Mi Reina) - MTZ Manuel Turizo.m4a",
-     img: "cover/Reggaeton/Mírame Ahora (Salud Mi Reina) - MTZ Manuel Turizo.avif",
+     path: "music/Reggaeton/MírameAhora(SaludMiReina)MTZManuelTurizo.m4a",
+     img: "cover/Reggaeton/MírameAhora(SaludMiReina)MTZManuelTurizo.avif",
      singer: "MTZ Manuel Turizo",
      songtime: "2:34",
      karaoke: "",
@@ -112,7 +112,7 @@ let All_song = [
    },
    {
      name: "Soso Remix",
-     path: "music/Reggaeton/Omah Lay X Ozuna - Soso Remix AFRO.m4a",
+     path: "music/Reggaeton/OmahLayXOzunaSosoRemixAFRO.m4a",
      img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Omah Lay X Ozuna",
      songtime: "3:05",
@@ -121,7 +121,7 @@ let All_song = [
    },
    {
      name: "Curarme El Alma",
-     path: "music/Reggaeton/Ozuna - Curarme El Alma Afro.m4a",
+     path: "music/Reggaeton/OzunaCurarmeElAlmaAfro.m4a",
      img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Ozuna",
      songtime: "2:00",
@@ -130,7 +130,7 @@ let All_song = [
    },
    {
      name: "Isla Desierta",
-     path: "music/Reggaeton/Ozuna - Isla Desierta Afro.m4a",
+     path: "music/Reggaeton/OzunaIslaDesiertaAfro.m4a",
      img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Ozuna",
      songtime: "2:56",
@@ -139,7 +139,7 @@ let All_song = [
    },
    {
      name: "Una Perla En San Juan",
-     path: "music/Reggaeton/Ozuna - Una Perla En San Juan Afro.m4a",
+     path: "music/Reggaeton/OzunaUnaPerlaEnSanJuanAfro.m4a",
      img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Ozuna",
      songtime: "3:38",
