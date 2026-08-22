@@ -16,13 +16,16 @@
 html, body {
     background-color: #000000 !important;
     color: #ffffff;
+    -webkit-user-select: none; /* תמיכה באפל: Safari ודפדפני iOS */
+    -moz-user-select: none; /* תמיכה בפיירפוקס */
+    -ms-user-select: none; /* תמיכה באינטרנט אקספלורר/אדג' ישן */
     user-select: none;
     padding-top: env(safe-area-inset-top);
 }
 
 html {
 	scroll-behavior: smooth;
-    user-select: none;
+    /* user-select: none; */
     overscroll-behavior: none;
     /*overflow-x: hidden;  מה שמשפיע על הגלילה באייפון ואנדרואיד 
     overflow-x: auto;*/
