@@ -20,8 +20,8 @@
             <div class="songNumBox">
                 <p class="songNumTxt"><span id="songNumCur">1</span> of <span id="songNumTot">35</span></p>
             </div>
-            <div class="ccBox" id="ccBox" title="Open CC (C)">
-                <i class="fa-solid fa-closed-captioning"></i>
+            <div class="plBtnBox" id="plBtnBox" title="Open Play List (P)">
+                <i class="fa-solid fa-list"></i>
             </div>
         </div>
         <div class="imgBoxBlur">
@@ -33,20 +33,21 @@
         <div class="imgTxtBox">
             <p id="songName">TENGO UN PLAN REMIX</p>
             <p id="artistName">KEY-KEY FT OZUNA</p>
-            <p id="genreTxt">Reggaeton</p>
+            <!-- <p id="genreTxt">Reggaeton</p> -->
         </div>
         <div class="fiveSecCont">
             <div class="forwardFiveBtn" onclick="forwardFive()">
-                <p class="fiveSecTxt" id="fiveSecForward"><i class="fa-solid fa-forward"></i></p>
             </div>
             <div class="backwardFiveBtn" onclick="backwardFive()">
-                <p class="fiveSecTxt" id="fiveSecBackward"><i class="fa-solid fa-backward"></i></p>
             </div>
         </div>
     </div>
     <div class="bottomSec">
-        <div class="apBtnBox">
-            <div onclick="autoplay_toggle()" title="Toggle Auto Play (A)" id="apBtnBox" class="active"><i class="fa-solid fa-repeat"></i></div>
+        <div class="kccBtnsBox">
+            <p class="fiveSecTxt" id="fiveSecBackward">-5 <i class="fa-solid fa-backward"></i></p>
+            <div onclick="karaoke_toggle()" title="Toggle Karaoke (M)" id="kBtnBox"><i class="fa-solid fa-microphone"></i></div>
+            <div title="Open CC (C)" id="ccBox"><i class="fa-solid fa-closed-captioning"></i></div>
+            <p class="fiveSecTxt" id="fiveSecForward"><i class="fa-solid fa-forward"></i> +5</p>
         </div>
         <div class="sliderSec">
             <div class="sliderBox">
@@ -60,14 +61,26 @@
             </div>
         </div>
         <div class="buttonsSec">
-            <div onclick="karaoke_toggle()" title="Toggle Karaoke (M)" id="kBtnBox"><i class="fa-solid fa-microphone"></i></div>
+            <div onclick="shuffle_toggle()" title="Toggle Shuffle (S)" id="shBtnBox"><i class="fa-solid fa-shuffle"></i></div>
             <div onclick="previous_song()" onmouseover="previousTitleShow(this)" id="prevBtnBox"><i class="fa-solid fa-backward-step"></i></div>
             <div onclick="justplay()" onmouseover="playPauseTitle(this)" id="playBtnBox">
                 <i id="faPlay" class="fa-solid fa-play"></i>
                 <i id="faPause" class="fa-solid fa-pause fahide"></i>
             </div>
             <div onclick="next_song()" onmouseover="nextTitleShow(this)" id="nextBtnBox"><i class="fa-solid fa-forward-step"></i></div>
-            <div onclick="shuffle_toggle()" title="Toggle Shuffle (S)" id="shBtnBox"><i class="fa-solid fa-shuffle"></i></div>
+            <div onclick="autoplay_toggle()" title="Toggle Auto Play (A)" id="apBtnBox" class="active"><i class="fa-solid fa-repeat"></i></div>
+        </div>
+    </div>
+    <div class="plCont" id="plCont">
+        <div class="plBox" id="plBox">
+            <div class="plTopBox">
+                <div class="plXBtn" id="plXBtn"><i class="fa-solid fa-xmark"></i></div>
+                <div class="plGenreTxtBox">
+                    <p class="plGenreTop">Current Play List:</p>
+                    <p class="plGenreTxt" id="genreTxt">Reggaeton</p>
+                </div>
+            </div>
+            <div class="plSongsBox" id="plSongsBox"></div>
         </div>
     </div>
     <script src="script.js"></script>

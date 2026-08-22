@@ -17,6 +17,7 @@ let tot_song_num = document.querySelector('#songNumTot');
 let m = document.querySelector('#m');
 let s = document.querySelector('#s');
 let total_time = document.querySelector('#totalTime');
+let pl_box = document.querySelector('#plSongsBox');
 // let styleDir = document.querySelector('[data="dir"]');
 
 let timer;
@@ -42,7 +43,7 @@ function resetAll() {
     let time = Math.floor(track.currentTime);
     let minutes = Math.floor(time/60);
     let secends = time%60;
-    secends = secends < 10 ? '0' + secends : secends;
+    secends = String(secends).padStart(2, '0'); // secends < 10 ? '0' + secends : secends
     m.innerHTML = minutes;
     s.innerHTML = secends;
 }
@@ -75,8 +76,8 @@ let All_song = [
   // Reggaton
    [{
      name: "AMANECE",
-     path: "music/Reggaeton/Anuel AA & Haze AMANECE.mp3",
-     img: "cover/Reggaeton/Anuel AA & Haze AMANECE.jpg",
+     path: "music/Reggaeton/Anuel AA & Haze AMANECE.m4a",
+     img: "cover/Reggaeton/Anuel AA & Haze AMANECE.avif",
      singer: "Anuel AA & Haze",
      songtime: "3:11",
      karaoke: "",
@@ -84,8 +85,8 @@ let All_song = [
    },
    {
      name: "Canción Bonita",
-     path: "music/Reggaeton/Carlos Vives, Ricky Martin - Canción Bonita.mp3",
-     img: "cover/Reggaeton/Carlos Vives, Ricky Martin - Canción Bonita.jpg",
+     path: "music/Reggaeton/Carlos Vives, Ricky Martin - Canción Bonita.m4a",
+     img: "cover/Reggaeton/Carlos Vives, Ricky Martin - Canción Bonita.avif",
      singer: "Carlos Vives, Ricky Martin",
      songtime: "2:59",
      karaoke: "",
@@ -93,8 +94,8 @@ let All_song = [
    },
    {
      name: "X ESO BB!",
-     path: "music/Reggaeton/JERE KLEIN & NICKI NICOLE - X ESO BB! ENFASIS.mp3",
-     img: "cover/Reggaeton/JERE KLEIN & NICKI NICOLE - X ESO BB! ENFASIS.jpg",
+     path: "music/Reggaeton/JERE KLEIN & NICKI NICOLE - X ESO BB! ENFASIS.m4a",
+     img: "cover/Reggaeton/JERE KLEIN & NICKI NICOLE - X ESO BB! ENFASIS.avif",
      singer: "JERE KLEIN & NICKI NICOLE",
      songtime: "3:20",
      karaoke: "",
@@ -102,8 +103,8 @@ let All_song = [
    },
    {
      name: "Mírame Ahora",
-     path: "music/Reggaeton/Mírame Ahora (Salud Mi Reina) - MTZ Manuel Turizo.mp3",
-     img: "cover/Reggaeton/Mírame Ahora (Salud Mi Reina) - MTZ Manuel Turizo.jpg",
+     path: "music/Reggaeton/Mírame Ahora (Salud Mi Reina) - MTZ Manuel Turizo.m4a",
+     img: "cover/Reggaeton/Mírame Ahora (Salud Mi Reina) - MTZ Manuel Turizo.avif",
      singer: "MTZ Manuel Turizo",
      songtime: "2:34",
      karaoke: "",
@@ -111,8 +112,8 @@ let All_song = [
    },
    {
      name: "Soso Remix",
-     path: "music/Reggaeton/Omah Lay X Ozuna - Soso Remix AFRO.mp3",
-     img: "cover/Reggaeton/ozunaAfro.jpg",
+     path: "music/Reggaeton/Omah Lay X Ozuna - Soso Remix AFRO.m4a",
+     img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Omah Lay X Ozuna",
      songtime: "3:05",
      karaoke: "",
@@ -120,8 +121,8 @@ let All_song = [
    },
    {
      name: "Curarme El Alma",
-     path: "music/Reggaeton/Ozuna - Curarme El Alma Afro.mp3",
-     img: "cover/Reggaeton/ozunaAfro.jpg",
+     path: "music/Reggaeton/Ozuna - Curarme El Alma Afro.m4a",
+     img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Ozuna",
      songtime: "2:00",
      karaoke: "",
@@ -129,8 +130,8 @@ let All_song = [
    },
    {
      name: "Isla Desierta",
-     path: "music/Reggaeton/Ozuna - Isla Desierta Afro.mp3",
-     img: "cover/Reggaeton/ozunaAfro.jpg",
+     path: "music/Reggaeton/Ozuna - Isla Desierta Afro.m4a",
+     img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Ozuna",
      songtime: "2:56",
      karaoke: "",
@@ -138,8 +139,8 @@ let All_song = [
    },
    {
      name: "Una Perla En San Juan",
-     path: "music/Reggaeton/Ozuna - Una Perla En San Juan Afro.mp3",
-     img: "cover/Reggaeton/ozunaAfro.jpg",
+     path: "music/Reggaeton/Ozuna - Una Perla En San Juan Afro.m4a",
+     img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Ozuna",
      songtime: "3:38",
      karaoke: "",
@@ -452,7 +453,7 @@ window.addEventListener("keydown" , (event) => {
     let time = Math.floor(track.currentTime);
     let minutes = Math.floor(time/60);
     let secends = time%60;
-    secends = secends < 10 ? '0' + secends : secends;
+    secends = String(secends).padStart(2, '0');
     m.innerHTML = minutes;
     s.innerHTML = secends;
   }
@@ -496,7 +497,7 @@ function forward_five_sec() {
     let time = Math.floor(track.currentTime);
     let minutes = Math.floor(time/60);
     let secends = time%60;
-    secends = secends < 10 ? '0' + secends : secends;
+    secends = String(secends).padStart(2, '0');
     m.innerHTML = minutes;
     s.innerHTML = secends;
 }
@@ -509,7 +510,7 @@ function backward_five_sec() {
     let time = Math.floor(track.currentTime);
     let minutes = Math.floor(time/60);
     let secends = time%60;
-    secends = secends < 10 ? '0' + secends : secends;
+    secends = String(secends).padStart(2, '0');
     m.innerHTML = minutes;
     s.innerHTML = secends;
 }
@@ -532,10 +533,11 @@ function next_song() {
     let time = Math.floor(track.currentTime);
     let minutes = Math.floor(time/60);
     let secends = time%60;
-    secends = secends < 10 ? '0' + secends : secends;
+    secends = String(secends).padStart(2, '0');
     m.innerHTML = minutes;
     s.innerHTML = secends;
     playsong();
+    setPl();
 }
 
 // previous song
@@ -556,10 +558,11 @@ function previous_song() {
     let time = Math.floor(track.currentTime);
     let minutes = Math.floor(time/60);
     let secends = time%60;
-    secends = secends < 10 ? '0' + secends : secends;
+    secends = String(secends).padStart(2, '0');
     m.innerHTML = minutes;
     s.innerHTML = secends;
     playsong();
+    setPl();
 }
 
 function nextTitleShow(x) {
@@ -601,13 +604,21 @@ function load_track(index_no){
 	  track_image.src = All_song[pl][index_no].img;
 	  track_image_under.src = All_song[pl][index_no].img;
     artist.innerHTML = All_song[pl][index_no].singer;
-    totalTime.innerHTML = All_song[pl][index_no].songtime;
+    // totalTime.innerHTML = All_song[pl][index_no].songtime;
     track.load();
 	  timer = setInterval(range_slider ,1000);
 	  tot_song_num.innerHTML = All_song[pl].length;
 	  cur_song_num.innerHTML = index_no + 1;
     document.title = All_song[pl][index_no].name + " - " + All_song[pl][index_no].singer;
 }
+
+track.addEventListener('loadedmetadata', () => {
+  let trackTotTime = Math.floor(track.duration);
+  let trackTotMin = Math.floor(trackTotTime/60);
+  let trackTotSec = trackTotTime%60;
+  trackTotSec = String(trackTotSec).padStart(2, '0');
+  totalTime.innerHTML = `${trackTotMin}:${trackTotSec}`;
+});
 
 load_track(index_no);
 
@@ -649,15 +660,15 @@ function karaoke_toggle() {
   if (toggleKaraoke == 1) {
     toggleKaraoke = 0;
     karaoke.classList.remove("active");
-	reset_slider();
+    karaoke.innerHTML = '<i class="fa-solid fa-microphone"></i>';
+	  reset_slider();
     track.src = All_song[pl][index_no].path;
     track.load();
     pausesong();
-    // document.getElementById('karaokeOnOff').innerHTML = '<i class="fa-solid fa-microphone sicon"></i>';
     let time = Math.floor(track.currentTime);
     let minutes = Math.floor(time/60);
     let secends = time%60;
-    secends = secends < 10 ? '0' + secends : secends;
+    secends = String(secends).padStart(2, '0');
     m.innerHTML = minutes;
     s.innerHTML = secends;
   }
@@ -666,15 +677,15 @@ function karaoke_toggle() {
     if (All_song[pl][index_no].karaoke != "") {
         toggleKaraoke = 1;
         karaoke.classList.add("active");
+        karaoke.innerHTML = '<i class="fa-solid fa-microphone-slash"></i>';
         reset_slider();
         track.src = All_song[pl][index_no].karaoke;
         track.load();
         pausesong();
-        // document.getElementById('karaokeOnOff').innerHTML = '<i class="fa-solid fa-microphone-slash sicon"></i>';
         let time = Math.floor(track.currentTime);
         let minutes = Math.floor(time/60);
         let secends = time%60;
-        secends = secends < 10 ? '0' + secends : secends;
+        secends = String(secends).padStart(2, '0');
         m.innerHTML = minutes;
         s.innerHTML = secends;
     }
@@ -722,11 +733,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const duration_slider = document.getElementById("duration_slider");
     duration_slider.addEventListener("input", function() {
         slider_position = track.duration * (slider.value / 100);
-    	track.currentTime = slider_position;
+    	  track.currentTime = slider_position;
         let time = Math.floor(track.currentTime);
         let minutes = Math.floor(time/60);
         let secends = time%60;
-        secends = secends < 10 ? '0' + secends : secends;
+        secends = String(secends).padStart(2, '0');
         m.innerHTML = minutes;
         s.innerHTML = secends;
     });
@@ -745,7 +756,7 @@ function range_slider(){
       let time = Math.floor(track.currentTime);
       let minutes = Math.floor(time/60);
       let secends = time%60;
-      secends = secends < 10 ? '0' + secends : secends;
+      secends = String(secends).padStart(2, '0');
       m.innerHTML = minutes;
       s.innerHTML = secends;
     }
@@ -769,4 +780,100 @@ function range_slider(){
           pausesong();
         }
 	  }
+}
+
+document.getElementById("plBtnBox").addEventListener("click", () => {
+  document.getElementById("plCont").classList.add("show");
+  document.getElementById("plBox").classList.add("show");
+});
+
+document.getElementById("plXBtn").addEventListener("click", () => {
+  document.getElementById("plCont").classList.remove("show");
+  document.getElementById("plBox").classList.remove("show");
+});
+
+function setPl() {
+  let newSong = "";
+  pl_box.innerHTML = "";
+  for (let i = 0; i < All_song[pl].length; i++) {
+    if (i == index_no) {
+      if (i < All_song[pl].length-1) {
+        newSong = `
+        <div class="plSong active" onclick="selectSong(${i})">
+            <p class="plSongNum">${i+1}</p>
+            <div class="plSongRight">
+                <div class="plSongInfo">
+                    <p class="plSongName">${All_song[pl][i].name}</p>
+                    <p class="plSongArtists">${All_song[pl][i].singer}</p>
+                </div>
+                <img src="${All_song[pl][i].img}" alt="Song Cover Image" class="plSongImg">
+            </div>
+        </div>
+        <div class="plSongSepLine"></div>
+        `;
+      } else {
+        newSong = `
+        <div class="plSong active" onclick="selectSong(${i})">
+            <p class="plSongNum">${i+1}</p>
+            <div class="plSongRight">
+                <div class="plSongInfo">
+                    <p class="plSongName">${All_song[pl][i].name}</p>
+                    <p class="plSongArtists">${All_song[pl][i].singer}</p>
+                </div>
+                <img src="${All_song[pl][i].img}" alt="Song Cover Image" class="plSongImg">
+            </div>
+        </div>
+        `;
+      }
+    } else {
+      if (i < All_song[pl].length-1) {
+        newSong = `
+        <div class="plSong" onclick="selectSong(${i})">
+            <p class="plSongNum">${i+1}</p>
+            <div class="plSongRight">
+                <div class="plSongInfo">
+                    <p class="plSongName">${All_song[pl][i].name}</p>
+                    <p class="plSongArtists">${All_song[pl][i].singer}</p>
+                </div>
+                <img src="${All_song[pl][i].img}" alt="Song Cover Image" class="plSongImg">
+            </div>
+        </div>
+        <div class="plSongSepLine"></div>
+        `;
+      } else {
+        newSong = `
+        <div class="plSong" onclick="selectSong(${i})">
+            <p class="plSongNum">${i+1}</p>
+            <div class="plSongRight">
+                <div class="plSongInfo">
+                    <p class="plSongName">${All_song[pl][i].name}</p>
+                    <p class="plSongArtists">${All_song[pl][i].singer}</p>
+                </div>
+                <img src="${All_song[pl][i].img}" alt="Song Cover Image" class="plSongImg">
+            </div>
+        </div>
+        `;
+      }
+    }
+    pl_box.innerHTML+=newSong;
+  }
+}
+setPl();
+
+function selectSong(songInd) {
+  load_track(songInd);
+  document.getElementById("plCont").classList.remove("show");
+  document.getElementById("plBox").classList.remove("show");
+  index_no = songInd;
+  reset_slider();
+  track.src = All_song[pl][index_no].path;
+  track.load();
+  let time = Math.floor(track.currentTime);
+  let minutes = Math.floor(time/60);
+  let secends = time%60;
+  secends = String(secends).padStart(2, '0');
+  m.innerHTML = minutes;
+  s.innerHTML = secends;
+  playsong();
+  setPl();
 }
