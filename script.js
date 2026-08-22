@@ -767,17 +767,18 @@ function range_slider(){
         if(autoplay == 1) {
             if(index_no < All_song[pl].length - 1) {
                 index_no += 1;
-	            load_track(index_no);
-	            playsong();
+                setPl();
+	              load_track(index_no);
+	              playsong();
             }
             else {
                 index_no = 0;
                 load_track(index_no);
-	            playsong();
+	              playsong();
             }
         }
         else {
-          pausesong();
+            pausesong();
         }
 	  }
 }
