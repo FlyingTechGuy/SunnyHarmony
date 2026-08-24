@@ -537,7 +537,7 @@ function next_song() {
     m.innerHTML = minutes;
     s.innerHTML = secends;
     playsong();
-    setPl();
+    updatePl();
 }
 
 // previous song
@@ -562,7 +562,7 @@ function previous_song() {
     m.innerHTML = minutes;
     s.innerHTML = secends;
     playsong();
-    setPl();
+    updatePl();
 }
 
 function nextTitleShow(x) {
@@ -767,12 +767,13 @@ function range_slider(){
         if(autoplay == 1) {
             if(index_no < All_song[pl].length - 1) {
                 index_no += 1;
-                setPl();
+                updatePl();
 	              load_track(index_no);
 	              playsong();
             }
             else {
                 index_no = 0;
+                updatePl();
                 load_track(index_no);
 	              playsong();
             }
@@ -793,71 +794,45 @@ document.getElementById("plXBtn").addEventListener("click", () => {
   document.getElementById("plBox").classList.remove("show");
 });
 
+function updatePl() {
+  let plSongStripes = document.querySelectorAll(".plSong");
+  let plSongImgAnims = document.querySelectorAll(".plSongImgAnim");
+  for (let i = 0; i < All_song[pl].length; i++) {
+    plSongStripes[i].classList.remove("active");
+    plSongImgAnims[i].classList.remove("active");
+    if (i == index_no) {
+      plSongStripes[i].classList.add("active");
+      plSongImgAnims[i].classList.add("active");
+    }
+  }
+}
+
 function setPl() {
   let newSong = "";
   pl_box.innerHTML = "";
   for (let i = 0; i < All_song[pl].length; i++) {
-    if (i == index_no) {
-      if (i < All_song[pl].length-1) {
-        newSong = `
-        <div class="plSong active" onclick="selectSong(${i})">
-            <p class="plSongNum">${i+1}</p>
-            <div class="plSongRight">
-                <div class="plSongInfo">
-                    <p class="plSongName">${All_song[pl][i].name}</p>
-                    <p class="plSongArtists">${All_song[pl][i].singer}</p>
-                </div>
+    newSong = `
+    <div class="plSong" onclick="selectSong(${i})">
+        <p class="plSongNum">${i+1}</p>
+        <div class="plSongRight">
+            <div class="plSongInfo">
+                <p class="plSongName">${All_song[pl][i].name}</p>
+                <p class="plSongArtists">${All_song[pl][i].singer}</p>
+            </div>
+            <div class="plSongImgBox">
                 <img src="${All_song[pl][i].img}" alt="Song Cover Image" class="plSongImg">
+                <div class="plSongImgAnim">
+                    <div class="plSongImgAnimLine plSongImgAnimLine1"></div>
+                    <div class="plSongImgAnimLine plSongImgAnimLine2"></div>
+                    <div class="plSongImgAnimLine plSongImgAnimLine3"></div>
+                </div>
             </div>
         </div>
-        <div class="plSongSepLine"></div>
-        `;
-      } else {
-        newSong = `
-        <div class="plSong active" onclick="selectSong(${i})">
-            <p class="plSongNum">${i+1}</p>
-            <div class="plSongRight">
-                <div class="plSongInfo">
-                    <p class="plSongName">${All_song[pl][i].name}</p>
-                    <p class="plSongArtists">${All_song[pl][i].singer}</p>
-                </div>
-                <img src="${All_song[pl][i].img}" alt="Song Cover Image" class="plSongImg">
-            </div>
-        </div>
-        `;
-      }
-    } else {
-      if (i < All_song[pl].length-1) {
-        newSong = `
-        <div class="plSong" onclick="selectSong(${i})">
-            <p class="plSongNum">${i+1}</p>
-            <div class="plSongRight">
-                <div class="plSongInfo">
-                    <p class="plSongName">${All_song[pl][i].name}</p>
-                    <p class="plSongArtists">${All_song[pl][i].singer}</p>
-                </div>
-                <img src="${All_song[pl][i].img}" alt="Song Cover Image" class="plSongImg">
-            </div>
-        </div>
-        <div class="plSongSepLine"></div>
-        `;
-      } else {
-        newSong = `
-        <div class="plSong" onclick="selectSong(${i})">
-            <p class="plSongNum">${i+1}</p>
-            <div class="plSongRight">
-                <div class="plSongInfo">
-                    <p class="plSongName">${All_song[pl][i].name}</p>
-                    <p class="plSongArtists">${All_song[pl][i].singer}</p>
-                </div>
-                <img src="${All_song[pl][i].img}" alt="Song Cover Image" class="plSongImg">
-            </div>
-        </div>
-        `;
-      }
-    }
+    </div>
+    `;
     pl_box.innerHTML+=newSong;
   }
+  updatePl();
 }
 setPl();
 
@@ -876,5 +851,5 @@ function selectSong(songInd) {
   m.innerHTML = minutes;
   s.innerHTML = secends;
   playsong();
-  setPl();
+  updatePl();
 }
