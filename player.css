@@ -154,6 +154,7 @@ body.show {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
+    transition: 0.3s;
 }
 
 .songNumBox {
@@ -232,7 +233,7 @@ body.show {
     gap: 5px;
     color: #fff;
     text-transform: uppercase;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #songName {

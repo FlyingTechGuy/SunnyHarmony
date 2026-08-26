@@ -27,6 +27,7 @@ let toggleKaraoke = 0;
 
 let pl = 0;
 let index_no = 0;
+let shuffledIndex = 0;
 let Playing_song = false;
 
 setTimeout(function() {
@@ -483,8 +484,8 @@ function playsong() {
 
 // pause song
 function pausesong() {
-	track.pause();
-	Playing_song = false;
+	  track.pause();
+	  Playing_song = false;
     document.getElementById("faPlay").classList.remove("fahide");
     document.getElementById("faPause").classList.add("fahide");
 }
@@ -493,7 +494,7 @@ function pausesong() {
 function forward_five_sec() {
     track.currentTime += 5;
     position = track.currentTime * (100 / track.duration);
-	slider.value =  position;
+	  slider.value =  position;
     let time = Math.floor(track.currentTime);
     let minutes = Math.floor(time/60);
     let secends = time%60;
@@ -506,7 +507,7 @@ function forward_five_sec() {
 function backward_five_sec() {
     track.currentTime -= 5;
     position = track.currentTime * (100 / track.duration);
-	slider.value =  position;
+	  slider.value =  position;
     let time = Math.floor(track.currentTime);
     let minutes = Math.floor(time/60);
     let secends = time%60;
@@ -517,17 +518,27 @@ function backward_five_sec() {
 
 // next song
 function next_song() {
-	if (index_no < All_song[pl].length - 1) {
-		index_no += 1;
-		load_track(index_no);
-	}
+    if (toggleShuffle == 1) {
+      if(shuffledIndex < All_song[pl].length - 1) {
+        shuffledIndex += 1;
+      }
+      else {
+        shuffledIndex = 0;
+      }
+      index_no = plindexes[shuffledIndex];
+    }
     else {
-		index_no = 0;
-		load_track(index_no);
-	}
+      if (index_no < All_song[pl].length - 1) {
+        index_no += 1;
+      }
+      else {
+        index_no = 0;
+      }
+    }
     // toggleKaraoke = 0;
     // kar.innerHTML = '<i class="fa-solid fa-microphone"></i>';
-	reset_slider();
+    load_track(index_no);
+	  reset_slider();
     track.src = All_song[pl][index_no].path;
     track.load();
     let time = Math.floor(track.currentTime);
@@ -542,17 +553,27 @@ function next_song() {
 
 // previous song
 function previous_song() {
-	if (index_no > 0) {
-		index_no -= 1;
-		load_track(index_no);
-	}
+    if (toggleShuffle == 1) {
+      if(shuffledIndex > 0) {
+        shuffledIndex -= 1;
+      }
+      else {
+        shuffledIndex = All_song[pl].length - 1;
+      }
+      index_no = plindexes[shuffledIndex];
+    }
     else {
-		index_no = All_song[pl].length - 1;
-		load_track(index_no);
-	}
+      if (index_no > 0) {
+        index_no -= 1;
+      }
+        else {
+        index_no = All_song[pl].length - 1;
+      }
+    }
     // toggleKaraoke = 0;
     // document.getElementById('karaokeOnOff').innerHTML = '<i class="fa-solid fa-microphone"></i>';
-	reset_slider();
+    load_track(index_no);
+	  reset_slider();
     track.src = All_song[pl][index_no].path;
     track.load();
     let time = Math.floor(track.currentTime);
@@ -645,13 +666,33 @@ function autoplay_toggle() {
 	}
 }
 
+let plindexes = Array.from({ length: All_song[pl].length }, (_, i) => i);
+function shufflePl() {
+  plindexes = Array.from({ length: All_song[pl].length }, (_, i) => i);
+  for (let i = plindexes.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [plindexes[i], plindexes[j]] = [plindexes[j], plindexes[i]];
+  }
+  console.log(plindexes);
+}
+
 function shuffle_toggle() {
     if (toggleShuffle == 1) {
         toggleShuffle = 0;
         shuffle.classList.remove("active");
-    } else {
+        document.getElementById("plBtnBox").style.opacity = 1;
+        document.getElementById("plBtnBox").addEventListener("click", addShowPlBox);
+        shuffledIndex = 0;
+      } else {
         toggleShuffle = 1;
         shuffle.classList.add("active");
+        document.getElementById("plBtnBox").style.opacity = 0.5;
+        document.getElementById("plBtnBox").removeEventListener("click", addShowPlBox);
+        shufflePl();
+        index_no = plindexes[shuffledIndex];
+        load_track(index_no);
+        playsong();
+        updatePl();
 	}
 }
 
@@ -765,18 +806,26 @@ function range_slider(){
     if(track.ended) {
         // play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
         if(autoplay == 1) {
+          if (toggleShuffle == 1) {
+            if(shuffledIndex < All_song[pl].length - 1) {
+                shuffledIndex += 1;
+            }
+            else {
+                shuffledIndex = 0;
+            }
+            index_no = plindexes[shuffledIndex];
+          }
+          else {
             if(index_no < All_song[pl].length - 1) {
                 index_no += 1;
-                updatePl();
-	              load_track(index_no);
-	              playsong();
             }
             else {
                 index_no = 0;
-                updatePl();
-                load_track(index_no);
-	              playsong();
             }
+          }
+          load_track(index_no);
+          playsong();
+          updatePl();
         }
         else {
             pausesong();
@@ -784,10 +833,12 @@ function range_slider(){
 	  }
 }
 
-document.getElementById("plBtnBox").addEventListener("click", () => {
+function addShowPlBox() {
   document.getElementById("plCont").classList.add("show");
   document.getElementById("plBox").classList.add("show");
-});
+}
+
+document.getElementById("plBtnBox").addEventListener("click", addShowPlBox);
 
 document.getElementById("plXBtn").addEventListener("click", () => {
   document.getElementById("plCont").classList.remove("show");
