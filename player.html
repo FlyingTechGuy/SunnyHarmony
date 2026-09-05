@@ -20,7 +20,7 @@
             <div class="songNumBox">
                 <p class="songNumTxt"><span id="songNumCur">1</span> of <span id="songNumTot">35</span></p>
             </div>
-            <div class="plBtnBox" id="plBtnBox" title="Open Play List (P)">
+            <div class="plBtnBox" id="plBtnBox" title="Open Playlist (Shift + P)">
                 <i class="fa-solid fa-list"></i>
             </div>
         </div>
@@ -36,22 +36,22 @@
             <!-- <p id="genreTxt">Reggaeton</p> -->
         </div>
         <div class="fiveSecCont">
-            <div class="forwardFiveBtn" onclick="forwardFive()">
+            <div class="forwardFiveBtn" id="forwardFiveBtn">
             </div>
-            <div class="backwardFiveBtn" onclick="backwardFive()">
+            <div class="backwardFiveBtn" id="backwardFiveBtn">
             </div>
         </div>
     </div>
     <div class="bottomSec">
         <div class="kccBtnsBox">
             <p class="fiveSecTxt" id="fiveSecBackward"><i class="fa-solid fa-backward"></i> - 5</p>
-            <div onclick="karaoke_toggle()" title="Toggle Karaoke (M)" id="kBtnBox"><i class="fa-solid fa-microphone"></i></div>
+            <div title="Toggle Karaoke (M)" id="kBtnBox"><i class="fa-solid fa-microphone"></i></div>
             <div title="Open CC (C)" id="ccBox"><i class="fa-solid fa-closed-captioning"></i></div>
             <p class="fiveSecTxt" id="fiveSecForward">+ 5 <i class="fa-solid fa-forward"></i></p>
         </div>
         <div class="sliderSec">
             <div class="sliderBox">
-                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()" class="diraction_slider">
+                <input type="range" min="0" max="100" value="0" id="duration_slider" class="diraction_slider">
             </div>
             <div class="curTimeBox">
                 <p id="m">0</p><p style="padding-left: 0px; padding-right: 0px;">:</p><p id="s">00</p>
@@ -61,14 +61,14 @@
             </div>
         </div>
         <div class="buttonsSec">
-            <div onclick="shuffle_toggle()" title="Toggle Shuffle (S)" id="shBtnBox"><i class="fa-solid fa-shuffle"></i></div>
-            <div onclick="previous_song()" onmouseover="previousTitleShow(this)" id="prevBtnBox"><i class="fa-solid fa-backward-step"></i></div>
-            <div onclick="justplay()" onmouseover="playPauseTitle(this)" id="playBtnBox">
+            <div title="Toggle Shuffle (S)" id="shBtnBox"><i class="fa-solid fa-shuffle"></i></div>
+            <div id="prevBtnBox"><i class="fa-solid fa-backward-step"></i></div>
+            <div id="playBtnBox">
                 <i id="faPlay" class="fa-solid fa-play"></i>
                 <i id="faPause" class="fa-solid fa-pause fahide"></i>
             </div>
-            <div onclick="next_song()" onmouseover="nextTitleShow(this)" id="nextBtnBox"><i class="fa-solid fa-forward-step"></i></div>
-            <div onclick="autoplay_toggle()" title="Toggle Auto Play (A)" id="apBtnBox" class="active"><i class="fa-solid fa-repeat"></i></div>
+            <div id="nextBtnBox"><i class="fa-solid fa-forward-step"></i></div>
+            <div title="Toggle Auto Play (A)" id="apBtnBox" class="active"><i class="fa-solid fa-repeat"></i></div>
         </div>
     </div>
     <div class="plCont" id="plCont">
@@ -83,5 +83,5 @@
             <div class="plSongsBox" id="plSongsBox"></div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </html>

@@ -23,30 +23,30 @@
     <div class="playlistsCont">
         <div class="playlistBox pl1" id="pl1">
             <p class="playlistBoxTitle">Reggaeton</p>
-            <p class="playlistBoxSongNum">8 Songs</p>
+            <p class="playlistBoxSongNum"><span id="playlistNum1">35</span> Songs</p>
         </div>
         <div class="playlistBox pl2">
             <p class="playlistBoxTitle">Chill Vibes</p>
-            <p class="playlistBoxSongNum">35 Songs</p>
+            <p class="playlistBoxSongNum"><span id="playlistNum2">35</span> Songs</p>
         </div>
         <div class="playlistBox pl3">
             <p class="playlistBoxTitle">Afro</p>
-            <p class="playlistBoxSongNum">35 Songs</p>
+            <p class="playlistBoxSongNum"><span id="playlistNum3">35</span> Songs</p>
         </div>
         <div class="playlistBox pl4">
             <p class="playlistBoxTitle">Soca</p>
-            <p class="playlistBoxSongNum">35 Songs</p>
+            <p class="playlistBoxSongNum"><span id="playlistNum4">35</span> Songs</p>
         </div>
         <div class="playlistBox pl5">
             <p class="playlistBoxTitle">Long English</p>
-            <p class="playlistBoxSongNum">35 Songs</p>
+            <p class="playlistBoxSongNum"><span id="playlistNum5">35</span> Songs</p>
         </div>
         <div class="playlistBox pl6">
             <p class="playlistBoxTitle">Long Spanish</p>
-            <p class="playlistBoxSongNum">35 Songs</p>
+            <p class="playlistBoxSongNum"><span id="playlistNum6">35</span> Songs</p>
         </div>
     </div>
-    <script>
+    <script type="module">
         setTimeout(function() {
             document.querySelector("body").classList.add("show");
         }, 500);
@@ -55,6 +55,9 @@
             setTimeout(function(){
                 window.location.replace("player.html");
             }, 250);
-        })
+        });
+
+        import { All_song } from './songsList.js';
+        document.getElementById("playlistNum1").innerHTML = All_song[0].length;
     </script>
 </html>
