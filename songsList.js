@@ -5,7 +5,6 @@ export let All_song = [
      path: "music/Reggaeton/AnuelAA&HazeAMANECE.m4a",
      img: "cover/Reggaeton/AnuelAA&HazeAMANECE.avif",
      singer: "Anuel AA & Haze",
-     songtime: "3:11",
      karaoke: "",
      lyrics: "https://www.azlyrics.com/lyrics/anuelaa/amanece.html"
    },
@@ -14,7 +13,6 @@ export let All_song = [
      path: "music/Reggaeton/CarlosVivesRickyMartinCanciónBonita.m4a",
      img: "cover/Reggaeton/CarlosVivesRickyMartinCanciónBonita.avif",
      singer: "Carlos Vives, Ricky Martin",
-     songtime: "2:59",
      karaoke: "",
      lyrics: "https://genius.com/Carlos-vives-and-ricky-martin-cancion-bonita-lyrics"
    },
@@ -23,7 +21,6 @@ export let All_song = [
      path: "music/Reggaeton/JereKlein&NickiNicoleXEsoBB!Enfasis.m4a",
      img: "cover/Reggaeton/JereKlein&NickiNicoleXEsoBB!Enfasis.avif",
      singer: "JERE KLEIN & NICKI NICOLE",
-     songtime: "3:20",
      karaoke: "",
      lyrics: "https://www.azlyrics.com/lyrics/jereklein/xesobb.html"
    },
@@ -32,7 +29,6 @@ export let All_song = [
      path: "music/Reggaeton/MírameAhora(SaludMiReina)MTZManuelTurizo.m4a",
      img: "cover/Reggaeton/MírameAhora(SaludMiReina)MTZManuelTurizo.avif",
      singer: "MTZ Manuel Turizo",
-     songtime: "2:34",
      karaoke: "",
      lyrics: "https://genius.com/Manuel-turizo-mirame-ahora-salud-mi-reina-lyrics"
    },
@@ -41,7 +37,6 @@ export let All_song = [
      path: "music/Reggaeton/OmahLayXOzunaSosoRemixAFRO.m4a",
      img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Omah Lay X Ozuna",
-     songtime: "3:05",
      karaoke: "",
      lyrics: "https://www.azlyrics.com/lyrics/omahlay/sosoremix.html"
    },
@@ -50,7 +45,6 @@ export let All_song = [
      path: "music/Reggaeton/OzunaCurarmeElAlmaAfro.m4a",
      img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Ozuna",
-     songtime: "2:00",
      karaoke: "",
      lyrics: "https://www.azlyrics.com/lyrics/ozuna/curarmeelalma.html"
    },
@@ -59,7 +53,6 @@ export let All_song = [
      path: "music/Reggaeton/OzunaIslaDesiertaAfro.m4a",
      img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Ozuna",
-     songtime: "2:56",
      karaoke: "",
      lyrics: "https://www.azlyrics.com/lyrics/ozuna/isladesierta.html"
    },
@@ -68,58 +61,132 @@ export let All_song = [
      path: "music/Reggaeton/OzunaUnaPerlaEnSanJuanAfro.m4a",
      img: "cover/Reggaeton/ozunaAfro.avif",
      singer: "Ozuna",
-     songtime: "3:38",
      karaoke: "",
      lyrics: "https://www.azlyrics.com/lyrics/ozuna/unaperlaensanjuan.html"
+   },
+   {
+     name: "Mango Y Ron",
+     path: "music/Reggaeton/MangoYRon.m4a",
+     img: "cover/Reggaeton/MangoYRon.avif",
+     singer: "Jesp7Tearz",
+     karaoke: "",
+     lyrics: ""
+   },
+   {
+     name: "No Tiene Sentido",
+     path: "music/Reggaeton/BeéleNoTieneSentido.m4a",
+     img: "cover/Reggaeton/BeéleNoTieneSentido.avif",
+     singer: "Beéle",
+     karaoke: "",
+     lyrics: "https://www.azlyrics.com/lyrics/beele/notienesentido.html"
+   },
+   {
+     name: "BRONCEADOR",
+     path: "music/Reggaeton/MalumaBRONCEADOR.m4a",
+     img: "cover/Reggaeton/MalumaBRONCEADOR.avif",
+     singer: "Maluma",
+     karaoke: "",
+     lyrics: "https://www.azlyrics.com/lyrics/maluma/bronceador.html"
+   },
+   {
+     name: "Enhorabuena",
+     path: "music/Reggaeton/ManuelTurizoEnhorabuena.m4a",
+     img: "cover/Reggaeton/ManuelTurizoEnhorabuena.avif",
+     singer: "ManuelTurizo",
+     karaoke: "",
+     lyrics: "https://genius.com/Manuel-turizo-enhorabuena-lyrics"
+   },
+   {
+     name: "Bailando Bachata",
+     path: "music/Reggaeton/ChayanneBailandoBachata.m4a",
+     img: "cover/Reggaeton/ChayanneBailandoBachata.avif",
+     singer: "Chayanne",
+     karaoke: "",
+     lyrics: "https://www.azlyrics.com/lyrics/chayanne/bailandobachata.html"
+   },
+   {
+     name: "Dardos",
+     path: "music/Reggaeton/RomeoSantosPrinceRoyceDardos.m4a",
+     img: "cover/Reggaeton/BetterLateThanNever.avif",
+     singer: "Romeo Santos, Prince Royce",
+     karaoke: "",
+     lyrics: "https://www.azlyrics.com/lyrics/romeosantos/dardos.html"
+   },
+   {
+     name: "Lokita Por Mí",
+     path: "music/Reggaeton/RomeoSantosPrinceRoyceLokitaPorMí.m4a",
+     img: "cover/Reggaeton/BetterLateThanNever.avif",
+     singer: "Romeo Santos, Prince Royce",
+     karaoke: "",
+     lyrics: "https://www.azlyrics.com/lyrics/romeosantos/lokitapormi.html"
    }],
+  //  ,
+  //  {
+  //    name: "",
+  //    path: "music/Reggaeton/.m4a",
+  //    img: "cover/Reggaeton/.avif",
+  //    singer: "",
+  //    karaoke: "",
+  //    lyrics: ""
+  //  }]
 
    // Chill Vibes
    [{
-    name: "Dynamite",
-    path: "songs/Dynamite.mp3",
-    img: "img/Dynamite.jpeg",
-    bgimg: "img/DynamiteBg.jpeg",
-    singer: "Taio Cruz",
-    songtime: "4:16",
-    karaoke: "songs/DynamiteK.mp3",
-    lyrics: "https://www.azlyrics.com/lyrics/taiocruz/dynamite.html"
+     name: "Road 85",
+     path: "music/ChillVibes/LuvineRoad85.m4a",
+     img: "cover/ChillVibes/LuvineRoad85.avif",
+     singer: "Luvine",
+     karaoke: "",
+     lyrics: ""
    },
    {
-     name: "Soweto",
-     path: "songs/Soweto.mp3",
-     img: "img/Soweto.jpeg",
-     bgimg: "img/Sowetobg.webp",
-     singer: "Victony, Tempoe",
-     songtime: "?:??",
-     karaoke: "songs/SowetoK.mp3",
-     lyrics: "https://www.azlyrics.com/lyrics/victony/soweto.html"
+     name: "1984",
+     path: "music/ChillVibes/Mauve1984.m4a",
+     img: "cover/ChillVibes/Mauve1984.avif",
+     singer: "Mauve",
+     karaoke: "",
+     lyrics: ""
    },
    {
-     name: "Mood",
-     path: "songs/Mood.mp3",
-     img: "img/Mood.jpeg",
-     bgimg: "img/Moodbg.jpeg",
-     singer: "24kGoldn",
-     songtime: "?:??",
-     karaoke: "songs/MoodK.mp3",
-     lyrics: "https://www.azlyrics.com/lyrics/24kgoldn/mood.html"
-   }/*,
+     name: "Endless Holiday",
+     path: "music/ChillVibes/NimusEndlessHoliday.m4a",
+     img: "cover/ChillVibes/NimusEndlessHoliday.avif",
+     singer: "Nimus",
+     karaoke: "",
+     lyrics: ""
+   },
    {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  },
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  }*/],
+     name: "Like Waves",
+     path: "music/ChillVibes/ShiekLikeWaves.m4a",
+     img: "cover/ChillVibes/ShiekLikeWaves.avif",
+     singer: "Shiek",
+     karaoke: "",
+     lyrics: ""
+   },
+   {
+     name: "Maybe Forever",
+     path: "music/ChillVibes/SRTWMaybeForever.m4a",
+     img: "cover/ChillVibes/SRTWMaybeForever.avif",
+     singer: "SRTW",
+     karaoke: "",
+     lyrics: ""
+   },
+   {
+     name: "Far Away",
+     path: "music/ChillVibes/SRTWNoileFarAway.m4a",
+     img: "cover/ChillVibes/SRTWNoileFarAway.avif",
+     singer: "SRTW, Noile",
+     karaoke: "",
+     lyrics: ""
+   },
+   {
+     name: "Like I Love You",
+     path: "music/ChillVibes/YVOLikeILoveYou.m4a",
+     img: "cover/ChillVibes/YVOLikeILoveYou.avif",
+     singer: "YVO",
+     karaoke: "",
+     lyrics: ""
+   }],
 
    // Electronic/Dance
    [{
@@ -145,73 +212,7 @@ export let All_song = [
     bgimg: "img/Perubg.jpeg",
     singer: "Fireboy DML, Ed Sheeran",
     songtime: "?:??"
-  }/*,
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  },
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  }*/],
-
-  // Pop
-  [{
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  },
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.webp",
-    singer: "???",
-    songtime: "?:??"
-  },
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  },
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  }/*,
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  },
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  }*/],
+  }],
 
   // Afrobeats
   [{
@@ -245,23 +246,7 @@ export let All_song = [
     bgimg: "img/AmIWrongBg.jpeg",
     singer: "Nico, Vinz",
     songtime: "?:??"
-  }/*,
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  },
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  }*/],
+  }],
   
   // Hip-Hop/Rap
   [{
@@ -287,21 +272,5 @@ export let All_song = [
     bgimg: "img/Bg.jpeg",
     singer: "???",
     songtime: "?:??"
-  }/*,
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  },
-  {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  }*/]
+  }]
 ];

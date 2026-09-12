@@ -234,15 +234,17 @@ body.show {
     color: #fff;
     text-transform: uppercase;
     margin-top: 20px;
+    width: 350px;
 }
 
 #songName {
     font-size: 1.5em;
     font-family: "elg";
+    font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 290px;
+    max-width: 300px;
 }
 
 #artistName {
@@ -252,7 +254,7 @@ body.show {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 290px;
+    max-width: 300px;
 }
 
 .bottomSec {
@@ -682,6 +684,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    overflow: hidden;
     opacity: 0;
     pointer-events: none;
     transform: scale(0.95);
@@ -760,6 +763,10 @@ input[type="range"]::-webkit-slider-runnable-track {
     overflow-y: scroll;
 }
 
+.plSongsBox::-webkit-scrollbar {
+    display: none;
+}
+
 .plSong {
     position: relative;
     width: 100%;
@@ -770,10 +777,11 @@ input[type="range"]::-webkit-slider-runnable-track {
     justify-content: space-between;
     padding: 15px;
     margin-block: 5px;
+    flex-shrink: 0;
     transition: 0.3s;
 }
 
-.plSong.active {
+.plSong.activated {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -816,28 +824,33 @@ input[type="range"]::-webkit-slider-runnable-track {
     justify-content: center;
     flex-direction: column;
     gap: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px;
 }
 
 .plSongName {
     font-size: 0.8em;
     font-family: "elg";
     color: rgba(255, 255, 255, 1);
-    white-space: nowrap;
+    /* white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-transform: uppercase;
-    max-width: 290px;
+    max-width: 290px; */
+    transition: transform 3.5s ease-in-out;
 }
 
 .plSongArtists {
     font-size: 0.8em;
     font-family: "elg";
     color: rgba(255, 255, 255, 0.8);
-    white-space: nowrap;
+    /* white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-transform: uppercase;
-    max-width: 290px;
+    max-width: 200px; */
+    transition: transform 3.5s ease-in-out;
 }
 
 .plSongImgBox {
@@ -874,7 +887,6 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 .plSongImgAnim.active {
-    pointer-events: auto;
     opacity: 1;
 }
 

@@ -353,8 +353,6 @@ track.addEventListener('loadedmetadata', () => {
   totalTime.innerHTML = `${trackTotMin}:${trackTotSec}`;
 });
 
-load_track(index_no);
-
 // change slider position 
 // function change_duration() {
 // 	slider_position = track.duration * (slider.value / 100);
@@ -453,7 +451,9 @@ document.getElementById("backBtnBox").addEventListener("click", function() {
 });
 
 document.getElementById("ccBox").addEventListener("click", function() {
+  if (All_song[pl][index_no].lyrics != "") {
     window.open(All_song[pl][index_no].lyrics, "_blank");
+  }
 });
 
 let forwardPause = false;
@@ -497,6 +497,23 @@ backward_five_btn.addEventListener("click", backwardFive);
 
 let slider_position;
 document.addEventListener("DOMContentLoaded", function() {
+    switch (localStorage.getItem("~curGenre")) {
+      case "0":
+        genre.innerHTML = "Reggaeton";
+        pl = 0;
+        setPl();
+        load_track(index_no);
+        break;
+      case "1":
+        genre.innerHTML = "Chill Vibes";
+        pl = 1;
+        setPl();
+        load_track(index_no);
+        break;
+      default:
+        console.log("Error loadding genre");
+        break;
+    }
     const duration_slider = document.getElementById("duration_slider");
     duration_slider.addEventListener("input", function() {
         slider_position = track.duration * (slider.value / 100);
@@ -508,6 +525,7 @@ document.addEventListener("DOMContentLoaded", function() {
         m.innerHTML = minutes;
         s.innerHTML = secends;
     });
+
     let plSongsOverlay = document.querySelectorAll(".plSongOverlay");
     plSongsOverlay.forEach(plSongsButton => {
       plSongsButton.addEventListener('click', (event) => {
@@ -565,6 +583,16 @@ function range_slider() {
 function addShowPlBox() {
   document.getElementById("plCont").classList.add("show");
   document.getElementById("plBox").classList.add("show");
+  let activatedSong = document.querySelector(".activated");
+  if (activatedSong) {
+    setTimeout(() => {
+      activatedSong.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest'
+      });
+    }, 500);
+  }
 }
 
 document.getElementById("plBtnBox").addEventListener("click", addShowPlBox);
@@ -578,12 +606,22 @@ function updatePl() {
   let plSongStripes = document.querySelectorAll(".plSong");
   let plSongImgAnims = document.querySelectorAll(".plSongImgAnim");
   for (let i = 0; i < All_song[pl].length; i++) {
-    plSongStripes[i].classList.remove("active");
+    plSongStripes[i].classList.remove("activated");
     plSongImgAnims[i].classList.remove("active");
     if (i == index_no) {
-      plSongStripes[i].classList.add("active");
+      plSongStripes[i].classList.add("activated");
       plSongImgAnims[i].classList.add("active");
     }
+  }
+  let activatedSong = document.querySelector(".activated");
+  if (activatedSong) {
+    setTimeout(() => {
+      activatedSong.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest'
+      });
+    }, 500);
   }
 }
 
@@ -615,7 +653,6 @@ function setPl() {
   }
   updatePl();
 }
-setPl();
 
 function selectSong(songInd) {
   load_track(songInd);
@@ -634,3 +671,155 @@ function selectSong(songInd) {
   playsong();
   updatePl();
 }
+
+// function setupMarquee() {
+//     const plcontainers = document.querySelectorAll('.plSongInfo');
+//     plcontainers.forEach(plcontainer => {
+//         const text1 = plcontainer.querySelector('.plSongName');
+//         const text2 = plcontainer.querySelector('.plSongArtists');
+//         const plcontainerWidth = plcontainer.clientWidth;
+//         const pltext1Width = text1.scrollWidth;
+//         const pltext2Width = text2.scrollWidth;
+//         if (pltext1Width > plcontainerWidth) {
+//             const pldistanceToMove = pltext1Width - plcontainerWidth;
+//             function runAnimation1() {
+//                 setTimeout(() => {
+//                     text1.style.transform = `translateX(${pldistanceToMove+10}px)`;
+//                 }, 1500);
+//                 setTimeout(() => {
+//                     text1.style.transform = 'translateX(0px)';
+//                 }, 6000); 
+//             }
+//             runAnimation1();
+//             setInterval(runAnimation1, 9500);
+//         }
+//         if (pltext2Width > plcontainerWidth) {
+//             const pldistanceToMove = pltext2Width - plcontainerWidth;
+//             function runAnimation2() {
+//                 setTimeout(() => {
+//                     text2.style.transform = `translateX(${pldistanceToMove+10}px)`;
+//                 }, 1500);
+//                 setTimeout(() => {
+//                     text2.style.transform = 'translateX(0px)';
+//                 }, 6000); 
+//             }
+//             runAnimation2();
+//             setInterval(runAnimation2, 9500);
+//         }
+//     });
+// }
+// window.addEventListener('load', setupMarquee);
+
+// function setupStrictConstantSpeed() {
+//   const plcontainers = document.querySelectorAll('.plSongInfo');
+//   const SPEED_PX_PER_SEC = 15; 
+//   const START_HOLD_SEC = 1.5; // כמה זמן להמתין בהתחלה לפני שזזים
+//   const END_HOLD_SEC = 1.5;   // כמה זמן להמתין בסוף לפני שחוזרים
+//   plcontainers.forEach((plcontainer, index) => {
+//     const pltext1 = plcontainer.querySelector('.plSongName');
+//     const pltext2 = plcontainer.querySelector('.plSongArtists');
+//     const plcontainerWidth = plcontainer.clientWidth;
+//     const pltext1Width = pltext1.scrollWidth;
+//     const pltext2Width = pltext2.scrollWidth;
+//     if (pltext1Width > plcontainerWidth) {
+//       const pltext1distance = pltext1Width - plcontainerWidth; // המרחק שצריך לעבור בפיקסלים
+//       // חישוב הזמן נטו שלוקח לטקסט לנוע צד אחד (הלוך) לפי המהירות שהגדרנו
+//       const pltext1moveTimeSec = pltext1distance / SPEED_PX_PER_SEC;
+//       // סך כל הזמן של מחזור אנימציה שלם (הלוך + חזור + שתי עצירות בקצוות)
+//       const pltext1totalDurationSec = (pltext1moveTimeSec * 2) + START_HOLD_SEC + END_HOLD_SEC;
+//       // תרגום זמני העצירות והתנועה לאחוזים מדויקים מתוך ה-100% של האנימציה
+//       const pltext1p1 = (START_HOLD_SEC / pltext1totalDurationSec) * 100;
+//       const pltext1p2 = ((START_HOLD_SEC + pltext1moveTimeSec) / pltext1totalDurationSec) * 100;
+//       const pltext1p3 = ((START_HOLD_SEC + pltext1moveTimeSec + END_HOLD_SEC) / pltext1totalDurationSec) * 100;
+//       // יצירת שם ייחודי לאנימציה
+//       const pltext1animationName = `strict-bounce-${index}`;
+//       // הזרקת ה-CSS הדינמי עם האחוזים המחושבים ספציפית לפי אורך הטקסט הזה
+//       const pltext1style = document.createElement('style');
+//       pltext1style.innerHTML = `
+//           @keyframes ${pltext1animationName} {
+//               0%, ${pltext1p1}% { transform: translateX(0); } /* עצירה בהתחלה */
+//               ${pltext1p2}%, ${pltext1p3}% { transform: translateX(${pltext1distance}px); } /* תנועה ועצירה בסוף */
+//               100% { transform: translateX(0); } /* חזרה להתחלה */
+//           }
+//       `;
+//       document.head.appendChild(pltext1style);
+//       pltext1.style.animation = `${pltext1animationName} ${pltext1totalDurationSec}s linear infinite`;
+//     }
+//     if (pltext2Width > plcontainerWidth) {
+//       const pltext2distance = pltext2Width - plcontainerWidth; // המרחק שצריך לעבור בפיקסלים
+//       // חישוב הזמן נטו שלוקח לטקסט לנוע צד אחד (הלוך) לפי המהירות שהגדרנו
+//       const pltext2moveTimeSec = pltext2distance / SPEED_PX_PER_SEC;
+//       // סך כל הזמן של מחזור אנימציה שלם (הלוך + חזור + שתי עצירות בקצוות)
+//       const pltext2totalDurationSec = (pltext2moveTimeSec * 2) + START_HOLD_SEC + END_HOLD_SEC;
+//       // תרגום זמני העצירות והתנועה לאחוזים מדויקים מתוך ה-100% של האנימציה
+//       const pltext2p1 = (START_HOLD_SEC / pltext2totalDurationSec) * 100;
+//       const pltext2p2 = ((START_HOLD_SEC + pltext2moveTimeSec) / pltext2totalDurationSec) * 100;
+//       const pltext2p3 = ((START_HOLD_SEC + pltext2moveTimeSec + END_HOLD_SEC) / pltext2totalDurationSec) * 100;
+//       // יצירת שם ייחודי לאנימציה
+//       const pltext2animationName = `strict-bounce-${index}`;
+//       // הזרקת ה-CSS הדינמי עם האחוזים המחושבים ספציפית לפי אורך הטקסט הזה
+//       const pltext2style = document.createElement('style');
+//       pltext2style.innerHTML = `
+//           @keyframes ${pltext2animationName} {
+//               0%, ${pltext2p1}% { transform: translateX(0); } /* עצירה בהתחלה */
+//               ${pltext2p2}%, ${pltext2p3}% { transform: translateX(${pltext2distance}px); } /* תנועה ועצירה בסוף */
+//               100% { transform: translateX(0); } /* חזרה להתחלה */
+//           }
+//       `;
+//       document.head.appendChild(pltext2style);
+//       pltext2.style.animation = `${pltext2animationName} ${pltext2totalDurationSec}s linear infinite`;
+//     }
+//   });
+// }
+// window.addEventListener('load', setupStrictConstantSpeed);
+
+function initPerfectMarquee(plelement) {
+  const plcontainers = document.querySelectorAll('.plSongInfo');
+  const SPEED_PIXELS_PER_SECOND = 15; 
+  const HOLD_DELAY = 1500;
+  plcontainers.forEach(container => {
+      const text = container.querySelector(`.${plelement}`); // '.plSongArtists'
+      const containerWidth = container.clientWidth;
+      const textWidth = text.scrollWidth;
+      if (textWidth > containerWidth) {
+          const distance = textWidth - containerWidth;
+          const duration = (distance / SPEED_PIXELS_PER_SECOND) * 1000;
+          function startAnimationLoop() {
+              setTimeout(() => {
+                  const animation = text.animate(
+                      [
+                          { transform: 'translateX(0px)' },
+                          { transform: `translateX(${distance}px)` }
+                      ], 
+                      {
+                          duration: duration,
+                          easing: 'linear',
+                          fill: 'forwards'
+                      }
+                  );
+                  animation.onfinish = () => {
+                      setTimeout(() => {
+                          const returnAnimation = text.animate(
+                              [
+                                  { transform: `translateX(${distance}px)` },
+                                  { transform: 'translateX(0px)' }
+                              ], 
+                              {
+                                  duration: duration,
+                                  easing: 'linear',
+                                  fill: 'forwards'
+                              }
+                          );
+                          returnAnimation.onfinish = startAnimationLoop;
+                      }, HOLD_DELAY);
+                  };
+              }, HOLD_DELAY);
+          }
+          startAnimationLoop();
+      }
+  });
+}
+window.addEventListener('load', () => {
+  initPerfectMarquee("plSongName");
+  initPerfectMarquee("plSongArtists");
+});
