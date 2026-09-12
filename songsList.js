@@ -10,8 +10,8 @@ export let All_song = [
    },
    {
      name: "Canción Bonita",
-     path: "music/Reggaeton/CarlosVivesRickyMartinCanciónBonita.m4a",
-     img: "cover/Reggaeton/CarlosVivesRickyMartinCanciónBonita.avif",
+     path: "music/Reggaeton/CarlosVivesRickyMartinCancionBonita.m4a",
+     img: "cover/Reggaeton/CarlosVivesRickyMartinCancionBonita.avif",
      singer: "Carlos Vives, Ricky Martin",
      karaoke: "",
      lyrics: "https://genius.com/Carlos-vives-and-ricky-martin-cancion-bonita-lyrics"
@@ -26,8 +26,8 @@ export let All_song = [
    },
    {
      name: "Mírame Ahora",
-     path: "music/Reggaeton/MírameAhora(SaludMiReina)MTZManuelTurizo.m4a",
-     img: "cover/Reggaeton/MírameAhora(SaludMiReina)MTZManuelTurizo.avif",
+     path: "music/Reggaeton/MTZManuelTurizoMirameAhora.m4a",
+     img: "cover/Reggaeton/MTZManuelTurizoMirameAhora.avif",
      singer: "MTZ Manuel Turizo",
      karaoke: "",
      lyrics: "https://genius.com/Manuel-turizo-mirame-ahora-salud-mi-reina-lyrics"
@@ -74,8 +74,8 @@ export let All_song = [
    },
    {
      name: "No Tiene Sentido",
-     path: "music/Reggaeton/BeéleNoTieneSentido.m4a",
-     img: "cover/Reggaeton/BeéleNoTieneSentido.avif",
+     path: "music/Reggaeton/BeeleNoTieneSentido.m4a",
+     img: "cover/Reggaeton/BeeleNoTieneSentido.avif",
      singer: "Beéle",
      karaoke: "",
      lyrics: "https://www.azlyrics.com/lyrics/beele/notienesentido.html"
@@ -114,7 +114,7 @@ export let All_song = [
    },
    {
      name: "Lokita Por Mí",
-     path: "music/Reggaeton/RomeoSantosPrinceRoyceLokitaPorMí.m4a",
+     path: "music/Reggaeton/RomeoSantosPrinceRoyceLokitaPorMi.m4a",
      img: "cover/Reggaeton/BetterLateThanNever.avif",
      singer: "Romeo Santos, Prince Royce",
      karaoke: "",
