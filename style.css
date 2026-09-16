@@ -97,6 +97,14 @@ body.show {
     overflow: hidden;
 }
 
+@media screen and (max-width: 500px) {
+    .bodyCont {
+        height: 100%;
+        width: 100%;
+        aspect-ratio: auto; 
+    }
+}
+
 .bgGr {
     position: absolute;
     top: 0;
