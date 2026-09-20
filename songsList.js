@@ -92,7 +92,7 @@ export let All_song = [
      name: "Enhorabuena",
      path: "music/Reggaeton/ManuelTurizoEnhorabuena.m4a",
      img: "cover/Reggaeton/ManuelTurizoEnhorabuena.avif",
-     singer: "ManuelTurizo",
+     singer: "Manuel Turizo",
      karaoke: "",
      lyrics: "https://genius.com/Manuel-turizo-enhorabuena-lyrics"
    },
