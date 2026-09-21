@@ -501,6 +501,13 @@ input[type="range"]::-webkit-slider-runnable-track {
     margin-left: -8px;
 }
 
+@media screen and (max-width: 500px) {
+    #apBtnBox::after,
+    #shBtnBox::after {
+        margin-top: -1px;
+    }
+}
+
 #apBtnBox.active,
 #shBtnBox.active {
     opacity: 1;
