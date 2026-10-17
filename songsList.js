@@ -218,6 +218,70 @@ export let All_song = [
     singer: "Rammor",
     karaoke: "",
     lyrics: ""
+  },
+  {
+    name: "Miles To Go",
+    path: "music/ChillVibes/SeamitMilesToGo.m4a",
+    img: "cover/ChillVibes/SeamitMilesToGo.avif",
+    singer: "Seamit",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Dreamland",
+    path: "music/ChillVibes/RelumDreamland.m4a",
+    img: "cover/ChillVibes/RelumDreamland.avif",
+    singer: "Relum",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Favourite View",
+    path: "music/ChillVibes/NovinoFavouriteView.m4a",
+    img: "cover/ChillVibes/NovinoFavouriteView.avif",
+    singer: "Novino",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Take Me Dancing",
+    path: "music/ChillVibes/MauveTakeMeDancing.m4a",
+    img: "cover/ChillVibes/MauveTakeMeDancing.avif",
+    singer: "Mauve",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Here Comes The Sun",
+    path: "music/ChillVibes/MauveHereComesTheSun.m4a",
+    img: "cover/ChillVibes/MauveHereComesTheSun.avif",
+    singer: "Mauve",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Airplane Mode",
+    path: "music/ChillVibes/GEPPSAirplaneMode.m4a",
+    img: "cover/ChillVibes/GEPPSAirplaneMode.avif",
+    singer: "GEPPS",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "9 PM",
+    path: "music/ChillVibes/COLIN9PM.m4a",
+    img: "cover/ChillVibes/COLIN9PM.avif",
+    singer: "COLIN",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Seaside Drift",
+    path: "music/ChillVibes/SRTWColinSeasideDrift.m4a",
+    img: "cover/ChillVibes/SRTWColinSeasideDrift.avif",
+    singer: "SRTW, Colin",
+    karaoke: "",
+    lyrics: ""
   }],
 
   // Dance Hall (Electronic/Dance)
