@@ -390,13 +390,13 @@ function shuffle_toggle() {
     if (toggleShuffle == 1) {
         toggleShuffle = 0;
         shuffle.classList.remove("active");
-        document.getElementById("plBtnBox").style.opacity = 1;
+        document.getElementById("plBtnBox").classList.remove("blocked");
         document.getElementById("plBtnBox").addEventListener("click", addShowPlBox);
         shuffledIndex = 0;
       } else {
         toggleShuffle = 1;
         shuffle.classList.add("active");
-        document.getElementById("plBtnBox").style.opacity = 0.5;
+        document.getElementById("plBtnBox").classList.add("blocked");
         document.getElementById("plBtnBox").removeEventListener("click", addShowPlBox);
         shufflePl();
         index_no = plindexes[shuffledIndex];
@@ -507,6 +507,18 @@ document.addEventListener("DOMContentLoaded", function() {
       case "1":
         genre.innerHTML = "Chill Vibes";
         pl = 1;
+        setPl();
+        load_track(index_no);
+        break;
+      case "2":
+        genre.innerHTML = "Dancehall";
+        pl = 2;
+        setPl();
+        load_track(index_no);
+        break;
+      case "3":
+        genre.innerHTML = "Afro";
+        pl = 3;
         setPl();
         load_track(index_no);
         break;

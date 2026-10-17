@@ -30,20 +30,20 @@
                 <p class="playlistBoxTitle">Chill Vibes</p>
                 <p class="playlistBoxSongNum"><span id="playlistNum2">35</span> Songs</p>
             </div>
-            <div class="playlistBox pl3">
+            <div class="playlistBox pl3" id="pl3">
                 <p class="playlistBoxTitle">Dancehall</p>
                 <p class="playlistBoxSongNum"><span id="playlistNum3">35</span> Songs</p>
             </div>
-            <div class="playlistBox pl4">
+            <div class="playlistBox pl4" id="pl4">
                 <p class="playlistBoxTitle">Afro</p>
                 <p class="playlistBoxSongNum"><span id="playlistNum4">35</span> Songs</p>
             </div>
             <div class="playlistBox pl5">
-                <p class="playlistBoxTitle">Soca</p>
+                <p class="playlistBoxTitle">Dance & Pop</p>
                 <p class="playlistBoxSongNum"><span id="playlistNum5">35</span> Songs</p>
             </div>
             <div class="playlistBox pl6">
-                <p class="playlistBoxTitle">Pop</p>
+                <p class="playlistBoxTitle">Soca</p>
                 <p class="playlistBoxSongNum"><span id="playlistNum6">35</span> Songs</p>
             </div>
         </div>
@@ -66,9 +66,25 @@
                 window.location.replace("player.html");
             }, 250);
         });
+        document.getElementById("pl3").addEventListener("click", function() {
+            localStorage.setItem("~curGenre", "2");
+            document.querySelector("body").style.opacity = 0;
+            setTimeout(function(){
+                window.location.replace("player.html");
+            }, 250);
+        });
+        document.getElementById("pl4").addEventListener("click", function() {
+            localStorage.setItem("~curGenre", "3");
+            document.querySelector("body").style.opacity = 0;
+            setTimeout(function(){
+                window.location.replace("player.html");
+            }, 250);
+        });
 
         import { All_song } from './songsList.js';
         document.getElementById("playlistNum1").innerHTML = All_song[0].length;
         document.getElementById("playlistNum2").innerHTML = All_song[1].length;
+        document.getElementById("playlistNum3").innerHTML = All_song[2].length;
+        document.getElementById("playlistNum4").innerHTML = All_song[3].length;
     </script>
 </html>

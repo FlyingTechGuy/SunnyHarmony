@@ -51,11 +51,11 @@
                 <p class="fiveSecTxt" id="fiveSecForward">+ 5 <i class="fa-solid fa-forward"></i></p>
             </div>
             <div class="sliderSec">
-                <div class="sliderBox">
-                    <input type="range" min="0" max="100" value="0" id="duration_slider" class="diraction_slider">
-                </div>
                 <div class="curTimeBox">
                     <p id="m">0</p><p style="padding-left: 0px; padding-right: 0px;">:</p><p id="s">00</p>
+                </div>
+                <div class="sliderBox">
+                    <input type="range" min="0" max="100" value="0" id="duration_slider" class="diraction_slider">
                 </div>
                 <div class="totTimeBox">
                     <p id="totalTime">2:58</p>
@@ -63,12 +63,14 @@
             </div>
             <div class="buttonsSec">
                 <div title="Toggle Shuffle (S)" id="shBtnBox"><i class="fa-solid fa-shuffle"></i></div>
-                <div id="prevBtnBox"><i class="fa-solid fa-backward-step"></i></div>
-                <div id="playBtnBox">
-                    <i id="faPlay" class="fa-solid fa-play"></i>
-                    <i id="faPause" class="fa-solid fa-pause fahide"></i>
+                <div class="buttonsCenter">
+                    <div id="prevBtnBox"><i class="fa-solid fa-backward-step"></i></div>
+                    <div id="playBtnBox">
+                        <i id="faPlay" class="fa-solid fa-play"></i>
+                        <i id="faPause" class="fa-solid fa-pause fahide"></i>
+                    </div>
+                    <div id="nextBtnBox"><i class="fa-solid fa-forward-step"></i></div>
                 </div>
-                <div id="nextBtnBox"><i class="fa-solid fa-forward-step"></i></div>
                 <div title="Toggle Auto Play (A)" id="apBtnBox" class="active"><i class="fa-solid fa-arrows-rotate"></i></div>
             </div>
         </div>

@@ -139,8 +139,8 @@ body.show {
     position: relative;
     width: 100%;
     height: 60vh;
-    padding: 30px;
-    padding-top: 130px;
+    padding: 20px;
+    padding-top: 113px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -150,7 +150,7 @@ body.show {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 30px;
+    padding: 20px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -175,6 +175,11 @@ body.show {
     backdrop-filter: blur(12px);
     transition: 0.3s;
     cursor: pointer;
+}
+
+.plBtnBox.blocked {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .songNumBox {
@@ -363,13 +368,13 @@ body.show {
     width: 100%;
 }
 
-input[type="range"] {
+/* input[type="range"] {
 	color: var(--defaultcolor);
 	--thumb-height: 1.125em;
 	--track-height: 0.225em;
 	--track-color: rgba(92, 92, 92, 0.4);
-	--brightness-hover: 100%; /* 180% */
-	--brightness-down: 100%; /* 80% */
+	--brightness-hover: 100%;
+	--brightness-down: 100%;
 	--clip-edges: 0.125em;
 }
 input[type="range"] {
@@ -430,11 +435,57 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 input[type="range"]::-webkit-slider-runnable-track {
 	background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center / 100% calc(var(--track-height) + 1px);
+} */
+
+input[type="range"] {
+    color: var(--defaultcolor);
+    --track-height: 0.3em; /* עובי הקו */
+    --track-color: rgba(92, 92, 92, 0.4);
+    --brightness-hover: 100%;
+    --brightness-down: 100%;
+    
+    position: relative;
+    background: #fff0;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    height: var(--track-height);
+    border-radius: 30px;
+}
+
+/* מסלול הבסיס (האפור) */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: var(--track-height);
+    border-radius: 30px;
+    background: var(--track-color);
+}
+
+/* ה-Thumb מוגדר כעת ברוחב 0 כדי שלא ייראה עיגול, אבל שומר על אזור הגרירה */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0px;
+    height: var(--track-height);
+    border-radius: 30px;
+    background: currentColor;
+    /* צל שממלא את החלק שמאחורי הסליידר בצבע הנבחר (currentColor) */
+    box-shadow: -100vw 0 0 100vw currentColor;
+    cursor: pointer;
+    transition: filter ease 100ms;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    filter: brightness(var(--brightness-hover));
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    filter: brightness(var(--brightness-down));
 }
 
 .curTimeBox {
     position: absolute;
-    bottom: -25px;
+    /* bottom: -23px; */
     left: 0;
     color: rgba(255, 255, 255, 0.8);
     display: flex;
@@ -442,11 +493,12 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 .curTimeBox p {
     font-family: "elg";
+    font-size: 15px;
 }
 
 .totTimeBox {
     position: absolute;
-    bottom: -25px;
+    /* bottom: -23px; */
     right: 0;
     color: rgba(255, 255, 255, 0.8);
     display: flex;
@@ -454,17 +506,19 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 .totTimeBox p {
     font-family: "elg";
+    font-size: 15px;
 }
 
 .buttonsSec {
     position: relative;
-    padding: 15px 25px;
-    margin-top: 30px;
+    width: 100%;
+    padding: 15px 0px;
+    margin-top: 10px;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 15px;
     color: #fff;
     z-index: 10;
 }
@@ -474,7 +528,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     position: relative;
     font-size: 1.3em;
     color: #fff;
-    width: 45px;
+    width: 30px;
     height: 45px;
     display: flex;
     align-items: center;
@@ -519,6 +573,15 @@ input[type="range"]::-webkit-slider-runnable-track {
 #apBtnBox.active::after,
 #shBtnBox.active::after {
     opacity: 1;
+}
+
+.buttonsCenter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
 }
 
 #prevBtnBox,
