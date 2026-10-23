@@ -416,6 +416,254 @@ export let All_song = [
     singer: "Ozuna",
     karaoke: "",
     lyrics: "https://www.azlyrics.com/lyrics/ozuna/unaperlaensanjuan.html"
+  },
+  {
+    name: "Eva Longoria",
+    path: "music/Afro/OzunaEvaLongoria.m4a",
+    img: "cover/Afro/ozunaAfro.avif",
+    singer: "Ozuna",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Soweto",
+    path: "music/Afro/VictonySoweto.m4a",
+    img: "cover/Afro/VictonySoweto.avif",
+    singer: "Victony",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Water",
+    path: "music/Afro/TylaWater.m4a",
+    img: "cover/Afro/TylaWater.avif",
+    singer: "Tyla",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "PONGO",
+    path: "music/Afro/RvssianRauwAlejandroWizkidPONGO.m4a",
+    img: "cover/Afro/RvssianRauwAlejandroWizkidPONGO.avif",
+    singer: "Rvssian, Rauw Alejandro, Wizkid",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "KU LO SA",
+    path: "music/Afro/OxladeCamilaCabelloKULOSA.m4a",
+    img: "cover/Afro/OxladeCamilaCabelloKULOSA.avif",
+    singer: "Oxlade, Camila Cabello",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Peru",
+    path: "music/Afro/FireboyDmlEdSheeranPeru.m4a",
+    img: "cover/Afro/FireboyDmlEdSheeranPeru.avif",
+    singer: "Fireboy Dml, Ed Sheeran",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Mi Chico",
+    path: "music/Afro/DJGojaMiChico.m4a",
+    img: "cover/Afro/DJGojaMiChico.avif",
+    singer: "DJ Goja",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Emiliana",
+    path: "music/Afro/CKayEmiliana.m4a",
+    img: "cover/Afro/CKayEmiliana.avif",
+    singer: "CKay",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Top Diesel",
+    path: "music/Afro/BeeleTopDiesel.m4a",
+    img: "cover/Afro/BeeleTopDiesel.avif",
+    singer: "Beele",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Frente Al Mar",
+    path: "music/Afro/BeeleOzunaFrenteAlMar.m4a",
+    img: "cover/Afro/BeeleOzunaFrenteAlMar.avif",
+    singer: "Beele, Ozuna",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Ta Ta Ta",
+    path: "music/Afro/BayanniJasonDeruloTaTaTa.m4a",
+    img: "cover/Afro/BayanniJasonDeruloTaTaTa.avif",
+    singer: "Bayanni, Jason Derulo",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Rush",
+    path: "music/Afro/AyraStarrRush.m4a",
+    img: "cover/Afro/AyraStarrRush.avif",
+    singer: "Ayra Starr",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "No Wahala",
+    path: "music/Afro/1daBantonNoWahala.m4a",
+    img: "cover/Afro/1daBantonNoWahala.avif",
+    singer: "1da Banton",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Ego",
+    path: "music/Afro/1daBantonEgo.m4a",
+    img: "cover/Afro/1daBantonEgo.avif",
+    singer: "1da Banton",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Commas",
+    path: "music/Afro/AyraStarrCommas.m4a",
+    img: "cover/Afro/TheYearITurned21.avif",
+    singer: "Ayra Starr",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Santa",
+    path: "music/Afro/AyraStarrRvssianRauwAlejandroSanta.m4a",
+    img: "cover/Afro/TheYearITurned21.avif",
+    singer: "Ayra Starr, Rvssian, Rauw Alejandro",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Frente Al Mar",
+    path: "music/Afro/BeeleOzunaFrenteAlMar.m4a",
+    img: "cover/Afro/BeeleOzunaFrenteAlMar.avif",
+    singer: "Beele, Ozuna",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Si Te Pillara",
+    path: "music/Afro/BeeleSiTePillara.m4a",
+    img: "cover/Afro/BeeleSiTePillara.avif",
+    singer: "Beele",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Move",
+    path: "music/Afro/CamilaCabelloAdamPortStryvMalachiiiMove.m4a",
+    img: "cover/Afro/CamilaCabelloAdamPortStryvMalachiiiMove.avif",
+    singer: "Camila Cabello, Adam Port, Stryv, Malachiii",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Cosita Linda",
+    path: "music/Afro/ElenaRoseJustinQuilesCositaLinda.m4a",
+    img: "cover/Afro/ElenaRoseJustinQuilesCositaLinda.avif",
+    singer: "Elena Rose, Justin Quiles",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Fire Fire",
+    path: "music/Afro/ShimzaARsCOKasangoFireFire.m4a",
+    img: "cover/Afro/ShimzaARsCOKasangoFireFire.avif",
+    singer: "Shimza, AR/CO, Kasango",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Push 2 Start Remix",
+    path: "music/Afro/TylaSeanPaulPush2StartRemix.m4a",
+    img: "cover/Afro/TylaSeanPaulPush2StartRemix.avif",
+    singer: "Tyla, Sean Paul",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "KANTE",
+    path: "music/Afro/DavidoFaveKANTE.m4a",
+    img: "cover/Afro/DavidoFaveKANTE.avif",
+    singer: "Davido, Fave",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "BUBALU",
+    path: "music/Afro/FeidRemaBUBALU.m4a",
+    img: "cover/Afro/FeidRemaBUBALU.avif",
+    singer: "Feid, Rema",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Sip",
+    path: "music/Afro/JoeboySip.m4a",
+    img: "cover/Afro/JoeboySip.avif",
+    singer: "Joeboy",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "X TI",
+    path: "music/Afro/KapoFeidXTI.m4a",
+    img: "cover/Afro/KapoFeidXTI.avif",
+    singer: "Kapo, Feid",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "ILY",
+    path: "music/Afro/KapoMykeTowersILY.m4a",
+    img: "cover/Afro/KapoMykeTowersILY.avif",
+    singer: "Kapo, Myke Towers",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Nesesari",
+    path: "music/Afro/KizzDanielPhilkeyzNesesari.m4a",
+    img: "cover/Afro/KizzDanielPhilkeyzNesesari.avif",
+    singer: "Kizz Daniel, Philkeyz",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "People",
+    path: "music/Afro/LibiancaAyraStarrOmahLayPeople.m4a",
+    img: "cover/Afro/LibiancaAyraStarrOmahLayPeople.avif",
+    singer: "Libianca, Ayra Starr, Omah Lay",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Understand",
+    path: "music/Afro/OmahLayUnderstand.m4a",
+    img: "cover/Afro/OmahLayUnderstand.avif",
+    singer: "Omah Lay",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Asiwaju",
+    path: "music/Afro/RugerAsiwaju.m4a",
+    img: "cover/Afro/RugerAsiwaju.avif",
+    singer: "Ruger",
+    karaoke: "",
+    lyrics: ""
   }
   // ,
   // {
