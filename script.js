@@ -393,7 +393,7 @@ function shuffle_toggle() {
         document.getElementById("plBtnBox").classList.remove("blocked");
         document.getElementById("plBtnBox").addEventListener("click", addShowPlBox);
         shuffledIndex = 0;
-      } else {
+    } else {
         toggleShuffle = 1;
         shuffle.classList.add("active");
         document.getElementById("plBtnBox").classList.add("blocked");
@@ -403,7 +403,7 @@ function shuffle_toggle() {
         load_track(index_no);
         playsong();
         updatePl();
-	}
+	  }
 }
 
 function karaoke_toggle() {

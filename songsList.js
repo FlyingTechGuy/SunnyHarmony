@@ -546,14 +546,6 @@ export let All_song = [
     lyrics: ""
   },
   {
-    name: "Frente Al Mar",
-    path: "music/Afro/BeeleOzunaFrenteAlMar.m4a",
-    img: "cover/Afro/BeeleOzunaFrenteAlMar.avif",
-    singer: "Beele, Ozuna",
-    karaoke: "",
-    lyrics: ""
-  },
-  {
     name: "Si Te Pillara",
     path: "music/Afro/BeeleSiTePillara.m4a",
     img: "cover/Afro/BeeleSiTePillara.avif",
