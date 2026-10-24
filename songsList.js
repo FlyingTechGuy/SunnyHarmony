@@ -612,7 +612,7 @@ export let All_song = [
   {
     name: "X TI",
     path: "music/Afro/KapoFeidXTI.m4a",
-    img: "cover/Afro/KapoFeidXTI.avif",
+    img: "cover/Afro/PorSiAlguienNosEscucha.avif",
     singer: "Kapo, Feid",
     karaoke: "",
     lyrics: ""
@@ -654,6 +654,94 @@ export let All_song = [
     path: "music/Afro/RugerAsiwaju.m4a",
     img: "cover/Afro/RugerAsiwaju.avif",
     singer: "Ruger",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Chevere Premium Remix",
+    path: "music/Afro/AriaVegaRyanCastroCheverePremiumRemix.m4a",
+    img: "cover/Afro/AriaVegaRyanCastroCheverePremiumRemix.avif",
+    singer: "Aria Vega, Ryan Castro",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Aloh Aloh",
+    path: "music/Afro/KapoAlohAloh.m4a",
+    img: "cover/Afro/KapoAlohAloh.avif",
+    singer: "Kapo",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Ruff",
+    path: "music/Afro/KapoRuff.m4a",
+    img: "cover/Afro/PorSiAlguienNosEscucha.avif",
+    singer: "Kapo",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Terminator Remix",
+    path: "music/Afro/KingPromiseSeanPaulTiwaSavageTerminatorRemix.m4a",
+    img: "cover/Afro/KingPromiseSeanPaulTiwaSavageTerminatorRemix.avif",
+    singer: "King Promise, Sean Paul, Tiwa Savage",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Monalisa",
+    path: "music/Afro/LojaySarzMonalisa.m4a",
+    img: "cover/Afro/LojaySarzMonalisa.avif",
+    singer: "Lojay, Sarz",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Low Key",
+    path: "music/Afro/BeeleMariaBecerraJoeboyLowKey.m4a",
+    img: "cover/Afro/BeeleMariaBecerraJoeboyLowKey.avif",
+    singer: "Beele, Maria Becerra, Joeboy",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Lately",
+    path: "music/Afro/MaleekBerryRugerLately.m4a",
+    img: "cover/Afro/MaleekBerryRugerLately.avif",
+    singer: "Maleek Berry, Ruger",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Wait For Me",
+    path: "music/Afro/MxziDJYukuWaitForMe.m4a",
+    img: "cover/Afro/MxziDJYukuWaitForMe.avif",
+    singer: "Mxzi, DJ Yuku",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "So Bad",
+    path: "music/Afro/TheMajeekSoBad.m4a",
+    img: "cover/Afro/TheMajeekSoBad.avif",
+    singer: "The Majeek",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Show Me Love",
+    path: "music/Afro/WizTheMcTylaBees&HoneyShowMeLove.m4a",
+    img: "cover/Afro/WizTheMcTylaBees&HoneyShowMeLove.avif",
+    singer: "WizTheMc, Tyla, Bees & Honey",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Rondando",
+    path: "music/Afro/YandelKapoRondando.m4a",
+    img: "cover/Afro/YandelKapoRondando.avif",
+    singer: "Yandel, Kapo",
     karaoke: "",
     lyrics: ""
   }
