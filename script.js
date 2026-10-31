@@ -487,13 +487,39 @@ shuffle.addEventListener("click", shuffle_toggle);
 previous.addEventListener("click", previous_song);
 previous.addEventListener("mouseover", previousTitleShow);
 play.addEventListener("click", justplay);
-previous.addEventListener("mouseover", playPauseTitle);
+play.addEventListener("mouseover", playPauseTitle);
 next.addEventListener("click", next_song);
-previous.addEventListener("mouseover", nextTitleShow);
-auto_play.addEventListener("click", autoplay_toggle);
+next.addEventListener("mouseover", nextTitleShow); // 
+auto_play.addEventListener("click", autoplay_toggle); // 
 // slider.addEventListener("change", change_duration);
-forward_five_btn.addEventListener("click", forwardFive);
-backward_five_btn.addEventListener("click", backwardFive);
+let clickTimer = null;
+const DCDTime = 300;
+forward_five_btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (clickTimer) {
+    clearTimeout(clickTimer);
+    clickTimer = null;
+    forwardFive();
+    return;
+  }
+  clickTimer = setTimeout(() => {
+    clickTimer = null;
+    justplay();
+  }, DCDTime);
+});
+backward_five_btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (clickTimer) {
+    clearTimeout(clickTimer);
+    clickTimer = null;
+    backwardFive();
+    return;
+  }
+  clickTimer = setTimeout(() => {
+    clickTimer = null;
+    justplay();
+  }, DCDTime);
+});
 
 let slider_position;
 document.addEventListener("DOMContentLoaded", function() {
