@@ -548,6 +548,12 @@ document.addEventListener("DOMContentLoaded", function() {
         setPl();
         load_track(index_no);
         break;
+      case "4":
+        genre.innerHTML = "Dance&Pop";
+        pl = 4;
+        setPl();
+        load_track(index_no);
+        break;
       default:
         console.log("Error loadding genre");
         break;

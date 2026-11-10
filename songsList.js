@@ -780,29 +780,255 @@ export let All_song = [
   // }
   ],
   
-  // Hip-Hop/Rap
+  // Dance&Pop
   [{
-    name: "Up Down",
-    path: "songs/UpDown.mp3",
-    img: "img/UpDown.jpeg",
-    bgimg: "img/UpDownBg.jpeg",
-    singer: "T-Pain",
-    songtime: "?:??"
+    name: "I Could Be The One",
+    path: "music/Dance&Pop/AviciiNickyRomeroICouldBeTheOne.m4a",
+    img: "cover/Dance&Pop/AviciiNickyRomeroICouldBeTheOne.avif",
+    singer: "Avicii, Nicky Romero",
+    karaoke: "",
+    lyrics: ""
   },
   {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.webp",
-    singer: "???",
-    songtime: "?:??"
+    name: "More Than You Know",
+    path: "music/Dance&Pop/AxwellSebastianIngrossoMoreThanYouKnow.m4a",
+    img: "cover/Dance&Pop/AxwellSebastianIngrossoMoreThanYouKnow.avif",
+    singer: "Axwell, Sebastian Ingrosso",
+    karaoke: "",
+    lyrics: ""
   },
   {
-    name: "???",
-    path: "songs/.mp3",
-    img: "img/.jpeg",
-    bgimg: "img/Bg.jpeg",
-    singer: "???",
-    songtime: "?:??"
-  }]
+    name: "One Too Many",
+    path: "music/Dance&Pop/JayMasonTomFerryMasoveOneTooMany.m4a",
+    img: "cover/Dance&Pop/JayMasonTomFerryMasoveOneTooMany.avif",
+    singer: "Jay Mason, Tom Ferry, Masove",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Fast Car",
+    path: "music/Dance&Pop/JonasBlueDakotaFastCar.m4a",
+    img: "cover/Dance&Pop/JonasBlueDakotaFastCar.avif",
+    singer: "Jonas Blue, Dakota",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Thats When You Know",
+    path: "music/Dance&Pop/KygoCarterFaithThatsWhenYouKnow.m4a",
+    img: "cover/Dance&Pop/KygoCarterFaithThatsWhenYouKnow.avif",
+    singer: "Kygo, Carter Faith",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Sunrise",
+    path: "music/Dance&Pop/KygoJasonWalkerSunrise.m4a",
+    img: "cover/Dance&Pop/KygoKidsInLove.avif",
+    singer: "Kygo, Jason Walker",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Take Me Back",
+    path: "music/Dance&Pop/KygoMaxMcNownTakeMeBack.m4a",
+    img: "cover/Dance&Pop/KygoMaxMcNownTakeMeBack.avif",
+    singer: "Kygo, Max McNown",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Stranger Things",
+    path: "music/Dance&Pop/KygoOneRepublicStrangerThings.m4a",
+    img: "cover/Dance&Pop/KygoKidsInLove.avif",
+    singer: "Kygo, One Republic",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Speechless",
+    path: "music/Dance&Pop/LonelyNightAriEllouSpeechless.m4a",
+    img: "cover/Dance&Pop/LonelyNightAriEllouSpeechless.avif",
+    singer: "Lonely Night, Ari, Ellou",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "The Feeling",
+    path: "music/Dance&Pop/LostFrequenciesBonnTheFeeling.m4a",
+    img: "cover/Dance&Pop/LostFrequenciesBonnTheFeeling.avif",
+    singer: "Lost Frequencies, Bonn",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Don't Leave Me Now",
+    path: "music/Dance&Pop/LostFrequenciesMathieuKossDon'tLeaveMeNow.m4a",
+    img: "cover/Dance&Pop/LostFrequenciesMathieuKossDon'tLeaveMeNow.avif",
+    singer: "Lost Frequencies, Mathieu Koss",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Crazy",
+    path: "music/Dance&Pop/LostFrequenciesZonderlingCrazy.m4a",
+    img: "cover/Dance&Pop/LostFrequenciesZonderlingCrazy.avif",
+    singer: "Lost Frequencies, Zonderling",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Lost With You",
+    path: "music/Dance&Pop/LucaNoirLostWithYou.m4a",
+    img: "cover/Dance&Pop/LucaNoirLostWithYou.avif",
+    singer: "Luca Noir",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Over You",
+    path: "music/Dance&Pop/MadismPhilipStrandOverYou.m4a",
+    img: "cover/Dance&Pop/MadismPhilipStrandOverYou.avif",
+    singer: "Madism, Philip Strand",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "In The Name Of Love",
+    path: "music/Dance&Pop/MartinGarrixBebeRexhaInTheNameOfLove.m4a",
+    img: "cover/Dance&Pop/MartinGarrixBebeRexhaInTheNameOfLove.avif",
+    singer: "Martin Garrix, Bebe Rexha",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Smile",
+    path: "music/Dance&Pop/MartinGarrixCarolinaLiarSmile.m4a",
+    img: "cover/Dance&Pop/MartinGarrixCarolinaLiarSmile.avif",
+    singer: "Martin Garrix, Carolina Liar",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Wherever You Are",
+    path: "music/Dance&Pop/MartinGarrixDubVisionShaunFarrugiaWhereverYouAre.m4a",
+    img: "cover/Dance&Pop/MartinGarrixDubVisionShaunFarrugiaWhereverYouAre.avif",
+    singer: "Martin Garrix, DubVision, Shaun Farrugia",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Real Love",
+    path: "music/Dance&Pop/MartinGarrixLloyisoRealLove.m4a",
+    img: "cover/Dance&Pop/MartinGarrixLloyisoRealLove.avif",
+    singer: "Martin Garrix, Lloyiso",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Hello",
+    path: "music/Dance&Pop/MizmoHello.m4a",
+    img: "cover/Dance&Pop/MizmoHello.avif",
+    singer: "Mizmo",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "I Ain't Worried",
+    path: "music/Dance&Pop/OneRepublicIAin'tWorried.m4a",
+    img: "cover/Dance&Pop/OneRepublicIAin'tWorried.avif",
+    singer: "OneRepublic",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "All My Life",
+    path: "music/Dance&Pop/R3HABAllMyLife.m4a",
+    img: "cover/Dance&Pop/R3HABAllMyLife.avif",
+    singer: "R3HAB",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "All I Need",
+    path: "music/Dance&Pop/RammorBienAllINeed.m4a",
+    img: "cover/Dance&Pop/RammorBienAllINeed.avif",
+    singer: "Rammor, Bien",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Let Me Go",
+    path: "music/Dance&Pop/RammorLonelyNightLetMeGo.m4a",
+    img: "cover/Dance&Pop/RammorLonelyNightLetMeGo.avif",
+    singer: "Rammor, Lonely Night",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Lost Your Love",
+    path: "music/Dance&Pop/RammorLonelyNightLostYourLove.m4a",
+    img: "cover/Dance&Pop/RammorLonelyNightLostYourLove.avif",
+    singer: "Rammor, Lonely Night",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Pray",
+    path: "music/Dance&Pop/RCityAyraStarrPray.m4a",
+    img: "cover/Dance&Pop/RCityAyraStarrPray.avif",
+    singer: "R. City, Ayra Starr",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Shed A Light",
+    path: "music/Dance&Pop/RobinSchulzDavidGuettaCheatCodesShedALight.m4a",
+    img: "cover/Dance&Pop/RobinSchulzDavidGuettaCheatCodesShedALight.avif",
+    singer: "Robin Schulz, David Guetta, Cheat Codes",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Young Right Now",
+    path: "music/Dance&Pop/RobinSchulzDennisLloydYoungRightNow.m4a",
+    img: "cover/Dance&Pop/RobinSchulzDennisLloydYoungRightNow.avif",
+    singer: "Robin Schulz, Dennis Lloyd",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Lose Control",
+    path: "music/Dance&Pop/TeddySwimsLoseControl.m4a",
+    img: "cover/Dance&Pop/TeddySwimsIveTriedEverythingButTherapy.avif",
+    singer: "Teddy Swims",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "The Door",
+    path: "music/Dance&Pop/TeddySwimsTheDoor.m4a",
+    img: "cover/Dance&Pop/TeddySwimsIveTriedEverythingButTherapy.avif",
+    singer: "Teddy Swims",
+    karaoke: "",
+    lyrics: ""
+  },
+  {
+    name: "Addicted",
+    path: "music/Dance&Pop/ZerbTheChainsmokersInkAddicted.m4a",
+    img: "cover/Dance&Pop/ZerbTheChainsmokersInkAddicted.avif",
+    singer: "Zerb, The Chainsmokers, Ink",
+    karaoke: "",
+    lyrics: ""
+  }
+  // ,
+  // {
+  //   name: "Up Down",
+  //   path: "songs/UpDown.mp3",
+  //   img: "img/UpDown.jpeg",
+  //   bgimg: "img/UpDownBg.jpeg",
+  //   singer: "T-Pain",
+  //   songtime: "?:??"
+  // }
+  ]
 ];
